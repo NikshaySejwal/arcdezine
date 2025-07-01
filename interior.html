@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Dezine Interior Design catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/interior.css">
+    <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
+</head>
+<body>
+    <header id="siteHeader">
+        <nav class="container">
+            <a href="index.html" class="navbar-brand">Nishawe</a>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="project.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Menu (hidden by default, slides in) -->
+        <div class="mobile-nav-menu" id="mobileNavMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Ensure these links match your desktop menu -->
+            </ul>
+        </div>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-image-slider">
+            <div class="hero-slide active" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('https://cdn.pixabay.com/photo/2022/07/28/13/53/bedroom-7349893_1280.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80');"></div>
+        </div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Exquisite Interior Designs</h1>
+                <p>Transforming spaces with elegance and functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="catalogue" class="container section-padding">
+            <h2 class="section-title">Our Catalogue</h2>
+            <div class="filter-nav">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="sofa">Sofa</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                <button class="filter-btn" data-filter="wardrobe">Wardrobe</button>
+                <button class="filter-btn" data-filter="bed">Beds</button>
+                <button class="filter-btn" data-filter="vanity">Vanity</button>
+                <button class="filter-btn" data-filter="cabinet">Cabinet</button>
+                <button class="filter-btn" data-filter="chair">Chair</button>
+            </div>
+            <!-- Sub-filters for Kitchen -->
+            <div class="sub-filter" data-parent="kitchen" style="display: none;">
+                <button class="sub-filter-btn" data-sub="l-shape">L-Shape</button>
+                <button class="sub-filter-btn" data-sub="u-shape">U-Shape</button>
+                <button class="sub-filter-btn" data-sub="straight">Straight</button>
+                <button class="sub-filter-btn" data-sub="island">Island</button>
+                <button class="sub-filter-btn" data-sub="parallel">Parallel</button>
+                <button class="sub-filter-btn" data-sub="g-shape">G-Shape</button>
+            </div>
+
+            <!-- Sub-filters for Sofa -->
+            <div class="sub-filter" data-parent="sofa" style="display: none;">
+                <button class="sub-filter-btn" data-sub="sectional">Sectional</button>
+                <button class="sub-filter-btn" data-sub="recliner">Recliner</button>
+                <button class="sub-filter-btn" data-sub="loveseat">Loveseat</button>
+                <button class="sub-filter-btn" data-sub="chaise">Chaise</button>
+            </div>
+
+            <!--sub-filter of wardrobe-->
+            <div class="sub-filter" data-parent="wardrobe" style="display: none;">
+                <button class="sub-filter-btn" data-sub="hindge-wardrobe">Hindge </button>
+                <button class="sub-filter-btn" data-sub="sliding-wardrobe">Sliding</button>
+                <button class="sub-filter-btn" data-sub="walkin-wardrobe">Walk-In</button>
+            </div>
+
+            <!-- Sub-filters for Beds -->
+            <div class="sub-filter" data-parent="bed" style="display: none;">
+                <button class="sub-filter-btn" data-sub="platform-bed">Platform-Bed</button>
+                <button class="sub-filter-btn" data-sub="storage-bed">Storage-Bed</button>
+                <!-- <button class="sub-filter-btn" data-sub="upholstered-bed">Upholdstered</button> -->
+                <button class="sub-filter-btn" data-sub="day-bed">Day Bed</button>
+            </div>
+
+            <!-- Sub-filters for Vanity -->
+            <div class="sub-filter" data-parent="vanity" style="display: none;">
+                <button class="sub-filter-btn" data-sub="single-sink">Single Sink</button>
+                <button class="sub-filter-btn" data-sub="double-sink">Double Sink</button>
+                <button class="sub-filter-btn" data-sub="floating-sink">Floating</button>
+                <button class="sub-filter-btn" data-sub="traditional-sink">Traditional</button>
+            </div>
+
+            <!-- Sub-filters for Cabinet -->
+            <div class="sub-filter" data-parent="cabinet" style="display: none;">
+                <button class="sub-filter-btn" data-sub="tv">TV Unit</button>
+                <button class="sub-filter-btn" data-sub="side">Side Board</button>
+                <button class="sub-filter-btn" data-sub="tall">Tall Cabinet</button>
+                <button class="sub-filter-btn" data-sub="puja">Puja unit</button>
+                <button class="sub-filter-btn" data-sub="other-cabinets">Other</button>
+            </div>
+
+            <!-- Sub-filters for Chair -->
+            <div class="sub-filter" data-parent="chair" style="display: none;">
+                <button class="sub-filter-btn" data-sub="dining-chair">Dining Chair</button>
+                <button class="sub-filter-btn" data-sub="arm-chair">Arm Chair</button>
+                <button class="sub-filter-btn" data-sub="puffs">Puffs </button>
+                <button class="sub-filter-btn" data-sub="stool">Stools</button>
+            </div>
+        </div>
+        </div>
+
+        <div id="subfilter-description" style="text-align: center; margin: 20px 0; font-style: italic; display: none;">
+            <!-- Description will be inserted here via JS -->
+        </div>
+
+        <div class="products-grid js-products-grid"></div>
+
+
+<!-- Popup for image enlargement -->
+        <div id="popupContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 9999;">
+        <img id="popupImage" src="" style="max-width: 90%; max-height: 90%;" />
+        </div>
+        </section>
+
+       
+    </main>
+    <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p>
+        Have a project in mind or just want to say hello? Reach out to us!
+      </p>
+      <div class="image-row-grid">
+        <div class="image-row-item">
+          <div class="image-row-description">
+            <p><strong>Email:</strong> arcdezine27@gmail.com</p>
+            <p><strong>Instagram</strong>arcdezineofficial</p>
+            <p><strong>Phone:</strong> +91 98997 31201, +91 88103 17784</p>
+            <p><strong>Location:</strong> 3rd Floor,syndicate Realtors,Arcade-48, near Central Park II, Sector 48, Gurugram, Haryana 122001 </p>
+          </div>
+        </div>
+        <div class="image-row-item">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.1618924028526!2d77.038271!3d28.4226814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190e9ab62e85%3A0x5a06e1fbffe6188a!2sARCADE%20-48!5e1!3m2!1sen!2sin!4v1750854415189!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="currentYear">2025</span> InteriorCo. All rights reserved.</p>
+      <p><a href="about.html">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
+      <!-- Contact Section -->
+  
+    </div>
+  </footer>
+    <script src="scripts/interior.js" type="module"></script>
+</body>
+</html>

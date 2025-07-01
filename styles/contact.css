@@ -1,0 +1,158 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.7;
+            padding-top: 70px; /* Add padding at the top for fixed navbar */
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Page title */
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Contact information styles */
+        .contact-info {
+            background-color: #e9ecef;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px; /* Add space below contact info */
+            width: 100%; /* Make it full width */
+            max-width: 600px; /* Limit the width */
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Social media icons styles */
+        .social-icons {
+            display: flex;
+            justify-content: center; /* Center the icons */
+            gap: 20px; /* Space between icons */
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Increased size */
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff; /* White background for icons */
+            color: #333; /* Default icon color */
+            font-size: 24px; /* Increased size */
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Smooth transition */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        .social-icon:hover {
+            background-color: #007bff; /* Change background on hover */
+            color: #fff; /* Change icon color on hover */
+        }
+
+        /* Individual social media icon colors (optional - customize as needed) */
+        .whatsapp { color: #25d366; }  /* WhatsApp */
+        .email { color: #d44638; }    /* Email */
+        .instagram { color: #e4405f; }  /* Instagram */
+        .facebook { color: #3b5998; } /* Facebook */
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .contact-info {
+                padding: 20px;
+            }
+
+            .social-icons {
+                gap: 15px; /* Adjust icon spacing on smaller screens */
+            }
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+             body {
+                padding-top: 120px; /* Adjust padding for mobile navbar */
+            }
+        }
+
+        /* Navbar Styles */
+.navbar {
+    position: fixed; /* Make it stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40; /* Dark background for navbar */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Vertically center items */
+    z-index: 1000; /* Ensure it's above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #f0f8f4; /* Lighter color on hover */
+}

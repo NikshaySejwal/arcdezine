@@ -1,0 +1,720 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'garanond', 'didot';
+      line-height: 1.6;
+      color: #2c2c2c;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    #siteHeader {
+      background: rgba(255, 255, 255);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1a1a1a;
+      text-decoration: none;
+      letter-spacing: -1px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+      color: #666;
+      transform: scale(1.05);
+    }
+
+    .navbar-nav {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .navbar-nav a {
+      color: #444;
+      text-decoration: none;
+      font-weight: 400;
+      position: relative;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+      text-transform: capitalize;
+    }
+
+    .navbar-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #ddd, #999);
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav a:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav a:hover {
+      color: #1a1a1a;
+    }
+
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: block; /* Show on mobile by default */
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other header content */
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0; /* Prevents it from shrinking if space is constrained */
+    /* border: 1px solid red; /* Debugging border - remove in production */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1f2937; /* Color of the hamburger lines */
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) { top: 0; }
+.hamburger-menu span:nth-child(2) { top: 8px; }
+.hamburger-menu span:nth-child(3) { top: 16px; }
+
+/* Animation for active (X) state */
+.hamburger-menu.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
+        
+/* Mobile Navigation Menu */
+/* Hide mobile nav by default */
+.mobile-nav-menu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 60px; /* adjust according to your navbar height */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show mobile nav when .open is added */
+.mobile-nav-menu.open {
+   padding-top: 30px;
+    display: block;
+}
+
+/* Style the menu links */
+.mobile-nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-nav-menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Optional: smooth transition */
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: none; /* hide desktop menu on mobile */
+    }
+}
+
+/* Hero Section */
+
+.logo {
+height: 50px;
+width: 100px;
+}
+/* Styles for the main hero section container */
+.hero-section {
+    position: relative; /* Essential for positioning the hero-image child */
+    min-height: 600px; /* **Set a height for your hero section.** Adjust as needed (e.g., 80vh for 80% of viewport height) */
+    display: flex; /* Helps align content within the hero */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+    overflow: hidden; /* Important: Hides any part of the image that goes beyond the hero-section boundaries */
+    color: white; /* Example: Assuming you want white text on your background image */
+    z-index: 1; /* Ensure hero section is above other page content, but below its own overlay */
+}
+
+/* Styles for the hero-image div acting as the background container */
+.hero-image {
+    position: absolute; /* Take it out of flow, position relative to .hero-section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it fill the width of .hero-section */
+    height: 100%; /* Make it fill the height of .hero-section */
+    z-index: -1; /* Place it *behind* the actual content of .hero-section */
+    overflow: hidden; /* Hide any overflow of the image itself */
+}
+
+/* Styles for the <img> tag inside hero-image */
+.hero-image img {
+    width: 100%; /* Make the image fill the width of its parent (.hero-image) */
+    height: 100%; /* Make the image fill the height of its parent (.hero-image) */
+    object-fit: cover; /* **This is crucial!** It scales the image to cover the entire container while maintaining its aspect ratio, cropping if necessary. */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Removes any extra space below the image */
+}
+
+/* --- Optional: Overlay for Text Readability --- */
+/* If your background image is busy, add a semi-transparent overlay */
+.hero-section::after { /* Using ::after here to be different from ::before in previous example */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for light text */
+    /* Or rgba(255, 255, 255, 0.3); for a light overlay if you have dark text */
+    z-index: 0; /* Place it between the hero-image (-1) and the hero content (1 or higher) */
+}
+
+/* Ensure your hero content is visible above the overlay */
+.hero-section h1,
+.hero-section p,
+.hero-section button {
+    position: relative; /* Ensures these elements respect z-index */
+    z-index: 2; /* Higher than the hero-section's z-index and the overlay's z-index */
+    /* Add any specific styles for your text/buttons here, e.g., font-size, color */
+}
+
+/* --- */
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="0.5" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: #929090;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #908d8d;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Styles */
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ddd, #999, #ddd);
+}
+
+/* About Section */
+#about {
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  position: relative;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+  background: #ffffff;
+  position: relative;
+}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .product-card {
+      /* background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); */
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      /* transition: all 0.2s ease; */
+      position: relative;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 100%);
+      opacity: 0; */
+      /* transition: opacity 0.3s ease; */
+    }
+
+    .product-card:hover::before {
+      opacity: 1;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); */
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      /* background: linear-gradient(45deg, #f0f0f0, #e8e8e8); */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .card-content {
+      padding: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .card-content p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .image-row-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .image-row-item {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .image-row-description p {
+      margin-bottom: 15px;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    .image-row-description strong {
+      color: #1a1a1a;
+    }
+
+    iframe {
+      border-radius: 10px;
+      filter: grayscale(100%) contrast(1.2);
+      /* transition: filter 0.3s ease; */
+    }
+
+    iframe:hover {
+      filter: grayscale(0%) contrast(1);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    footer a:hover {
+      opacity: 0.7;
+    }
+
+    /* Subtle animations */
+    .product-card, .image-row-item {
+      animation: fadeInUp 0.1s ease-out;
+    }
+
+    .product-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .product-card:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Add scroll padding for fixed header */
+    section {
+      scroll-margin-top: 80px;
+    }
+
+
+    /* --- Why Choose Us Section Styling --- */
+
+/* Basic padding for the section - matching general section-padding */
+.section-padding {
+    padding: 100px 0; /* Matching existing .section-padding */
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%); /* Similar to #about section */
+}
+
+/* Container for content within the section - already consistent */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Ensures padding on smaller screens */
+}
+
+/* Title styling - matching existing .section-title */
+.section-title {
+    font-size: 2.5rem; /* Matching existing .section-title font-size */
+    font-weight: 300; /* Matching existing .section-title font-weight */
+    text-align: center;
+    margin-bottom: 50px; /* Matching existing .section-title margin-bottom */
+    color: #1a1a1a; /* Matching existing .section-title color */
+    letter-spacing: -1px; /* Matching existing .section-title letter-spacing */
+    position: relative; /* Needed for ::after pseudo-element */
+    font-family: 'Georgia', serif; /* Matching overall theme font */
+}
+
+/* Underline for section title - matching existing .section-title::after */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #ddd, #999, #ddd); /* Matching existing gradient */
+}
+
+/* Intro paragraph styling - matching other general paragraphs */
+.section-intro-text {
+    text-align: center;
+    max-width: 700px; /* Matching #about p max-width */
+    margin: 0 auto 50px auto; /* Matching section title margin pattern */
+    font-size: 1.1rem; /* Matching #about p font-size */
+    line-height: 1.8; /* Matching #about p line-height */
+    color: #555; /* Matching #about p color */
+    font-family: 'Georgia', serif; /* Matching overall theme font */
+}
+
+/* --- Reasons Grid Container --- */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: one column */
+    gap: 40px; /* Matching existing .grid gap */
+    margin-top: 50px; /* Similar to .grid margin-top */
+}
+
+/* --- Individual Reason Card Styling - matching .product-card --- */
+.reason-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); /* Matching .product-card background */
+    padding: 30px; /* Aligning with .card-content padding */
+    border-radius: 15px; /* Matching .product-card border-radius */
+    overflow: hidden; /* Inherited from product-card, ensure it applies */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Matching .product-card shadow */
+    transition: all 0.4s ease; /* Matching .product-card transition */
+    position: relative; /* For z-index and potential ::before effects */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Georgia', serif; /* Matching overall theme font */
+    animation: fadeInUp 0.6s ease-out; /* Matching initial animation */
+}
+
+/* Hover effect - matching .product-card:hover */
+.reason-card:hover {
+    transform: translateY(-10px); /* Matching .product-card:hover transform */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Matching .product-card:hover shadow */
+}
+
+/* Optional: Add the subtle overlay effect on hover if desired, like product-card */
+.reason-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensure it's below text */
+}
+
+.reason-card:hover::before {
+    opacity: 1;
+}
+
+
+/* --- Reason Title (h3) Styling - aligning with .card-content h3 --- */
+.reason-card h3 {
+    font-size: 1.4rem; /* Matching .card-content h3 font-size */
+    font-weight: 400; /* Matching .card-content h3 font-weight */
+    color: #1a1a1a; /* Matching .card-content h3 color */
+    margin-top: 0;
+    margin-bottom: 15px; /* Matching .card-content h3 margin-bottom */
+    line-height: 1.2; /* Slightly adjusted for better fit with emojis */
+    letter-spacing: -0.5px; /* Matching .card-content h3 letter-spacing */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between emoji and text */
+    font-family: 'Georgia', serif; /* Matching overall theme font */
+    position: relative; /* For z-index if using ::before overlay */
+    z-index: 2; /* Ensure text is above ::before overlay */
+}
+
+/* --- Reason Description (p) Styling - aligning with .card-content p --- */
+.reason-card p {
+    font-size: 1rem; /* Closer to .card-content p default or slightly larger than .image-row-description p */
+    color: #666; /* Matching .card-content p color */
+    line-height: 1.6; /* Matching .card-content p line-height */
+    margin-bottom: 0;
+    font-family: 'Georgia', serif; /* Matching overall theme font */
+    position: relative; /* For z-index if using ::before overlay */
+    z-index: 2; /* Ensure text is above ::before overlay */
+}
+
+
+/* --- Media Queries --- */
+
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 480px) {
+    /* Product Cards */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2+ columns */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Header Navigation */
+    header nav {
+        flex-direction: row; /* Horizontal navigation */
+    }
+    header a.navbar-brand {
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    header ul.navbar-nav {
+        display: flex; /* Show desktop nav */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        margin-top: 0; /* Remove top top margin */
+    }
+    header ul.navbar-nav li {
+        margin-left: 25px; /* Restore original spacing */
+        margin-right: 0; /* No right margin */
+    }
+    .hamburger-menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+    .mobile-nav-menu {
+        display: none; /* Hide mobile menu on desktop */
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 3.5rem; /* Larger font for tablets */
+    }
+    .hero-content p {
+        font-size: 1.35rem;
+    }
+
+    /* Filter Section */
+    .filter-buttons {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+    .filter-btn {
+        padding: 15px 30px; /* Restore original padding for larger screens */
+    }
+
+    /* Product Cards */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 2-3 columns */
+    }
+
+    /* Image Row Grid */
+    .image-row-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for images */
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 4.5rem; /* Even larger font for desktops */
+    }
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    /* Product Cards */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on large desktops */
+        gap: 50px; /* More gap for larger screens */
+    }
+
+    /* Image Row Grid */
+    .image-row-grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 columns for images */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
