@@ -613,6 +613,20 @@ width: 100px;
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2+ columns */
     }
+    .image-row-grid {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .image-row-item {
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 220px;
+    display: block;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */

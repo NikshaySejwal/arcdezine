@@ -351,6 +351,8 @@ nav {
 
 .filter-buttons {
     display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center buttons when wrapped */
     background: #ffffff;
     border-radius: 50px;
     padding: 8px;
@@ -819,6 +821,20 @@ nav {
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2+ columns */
     }
+    .image-row-grid {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .image-row-item {
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 220px;
+    display: block;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -869,7 +885,7 @@ nav {
 
     /* Image Row Grid */
     .image-row-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for images */
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for images */
     }
 }
 

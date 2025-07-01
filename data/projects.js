@@ -30,7 +30,7 @@ One of the standout features of the mall is the front façade escalator. Strateg
   },
   {
     category: 'retail',
-    image: ['images/projects/Raghuramjeweller/view1.jpg',
+    image: ['images/projects/Raghuramjeweller/View1.jpg',
       'images/projects/Raghuramjeweller/view2.jpg',
       'images/projects/Raghuramjeweller/view3.jpg',
       'images/projects/Raghuramjeweller/view4.jpg',
@@ -41,7 +41,7 @@ One of the standout features of the mall is the front façade escalator. Strateg
       'images/projects/Raghuramjeweller/view9.png',
       'images/projects/Raghuramjeweller/view10.png',
       'images/projects/Raghuramjeweller/view11.png',
-      'images/projects/Raghuramjeweller/view12.png',
+      'images/projects/Raghuramjeweller/View12.png',
     ],
     year: 'In progress ',
     name: "Raghuram Jeweller's",
