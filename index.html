@@ -6,6 +6,7 @@
   <title>Arc dezine</title>
   <link rel="stylesheet" href="styles/index.css">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -13,21 +14,30 @@
   <header id="siteHeader">
     <div class="container">
       <nav>
+
+        <!-- Hamburger Menu Icon (for mobile) -->
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Mobile Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Logo -->
         <a href="#" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo" alt=""></a>
-        <!-- Hamburger Menu Icon -->
-            <div class="hamburger-menu" id="hamburgerMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-                
-            </div>
         
+        <!-- Desktop Navigation Links (hidden on mobile) -->
         <ul class="navbar-nav">
           <li><a href="project.html">Projects</a></li>
           <li><a href="interior.html">Interior</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Phone Icon/Button (for mobile and desktop) -->
+        <a href="tel:+919899624693" class="phone-icon" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+
+        <!-- Original Phone Button (hidden on mobile, shown on desktop) -->
+        <button class="phone-button">+91 98996 24693</button>
       </nav>
     </div>
   </header>
@@ -46,7 +56,12 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-image">
-      <img src="background_images/home.jpg" alt="">
+      <img src="background_images/home-large.jpg"
+           srcset="background_images/home-small.jpg 480w,
+                   background_images/home-medium.jpg 800w,
+                   background_images/home-large.jpg 1200w"
+           sizes="100vw"
+           alt="Hero Image">
     </div>
     <div class="hero-content">
       <h1>Empowering Dreams</h1>
@@ -70,7 +85,7 @@
       <h2 class="section-title">Our Services</h2>
       <div class="grid">
         <div class="product-card">
-          <div><img src="images/Architecture_Planning.jpg" alt="">
+          <div><img src="images/Architecture_Planning.jpg" alt="" loading="lazy">
           </div>
           <div class="card-content">
             <h3>Architecture & Planning</h3>
@@ -78,14 +93,14 @@
           </div>
         </div>
         <div class="product-card">
-          <div ><img src="images/Interior_Design.jpg" alt=""></div>
+          <div ><img src="images/Interior_Design.jpg" alt="" loading="lazy"></div>
           <div class="card-content">
             <h3>Interior Design</h3>
             <p>Tailored interior solutions with mood boards, 3D visuals, material selection, and on-site styling.</p>
           </div>
         </div>
         <div class="product-card">
-          <div ><img src="images/Custom_Furniture_Manufacturing.jpg" alt=""></div>
+          <div ><img src="images/Custom_Furniture_Manufacturing.jpg" alt="" loading="lazy"></div>
           <div class="card-content">
             <h3>Custom Furniture Manufacturing</h3>
             <p>Designed and manufactured in-house, our furniture pieces offer a blend of style, comfort, and durability.</p>
@@ -167,50 +182,92 @@
 
   <script>
 
-    // --- Hamburger Menu Functionality ---
+    // --- Helper Functions ---
+    // Debounce function to limit how often a function is called
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            const context = this;
+            const args = arguments;
+            const later = function() {
+                timeout = null;
+                func.apply(context, args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // --- DOM Elements ---
     const hamburger = document.getElementById('hamburgerMenu');
     const mobileNav = document.getElementById('mobileNavMenu');
+    const siteHeader = document.getElementById('siteHeader');
+    const currentYearSpan = document.getElementById('currentYear');
+    const productCards = document.querySelectorAll('.product-card');
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
+    // --- Hamburger Menu Functionality ---
     if (hamburger && mobileNav) {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             mobileNav.classList.toggle('open');
-            // Removed body.no-scroll toggle as it's no longer a full-screen overlay
+            // Toggle aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+             // Optional: Add/remove class to body to prevent scrolling
+             // document.body.classList.toggle('no-scroll', isExpanded);
         });
 
-        // Close mobile menu when a link is clicked
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
+        // Use event delegation for mobile menu links
+        mobileNav.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
                 hamburger.classList.remove('active');
                 mobileNav.classList.remove('open');
-            });
+                 // Optional: Remove body.no-scroll class
+                 // document.body.classList.remove('no-scroll');
+            }
         });
     }
 
     // Close mobile menu if window is resized to desktop size
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', debounce(function() {
         if (window.innerWidth >= 768) { // Matches your @media (min-width: 768px) breakpoint
-            if (hamburger) hamburger.classList.remove('active');
-            if (mobileNav) mobileNav.classList.remove('open');
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                 hamburger.setAttribute('aria-expanded', 'false');
+            }
+            if (mobileNav) {
+                 mobileNav.classList.remove('open');
+                 // Optional: Remove body.no-scroll class
+                 // document.body.classList.remove('no-scroll');
+            }
         }
-    });
-    // Set current year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    }, 100)); // Debounce with a wait of 100ms
 
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-      const header = document.getElementById('siteHeader');
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.1)';
-      } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
-      }
-    });
+    // --- Set Current Year ---
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // --- Header Scroll Effect ---
+    const handleScroll = debounce(function() {
+        if (siteHeader) {
+            if (window.scrollY > 100) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
+        }
+    }, 50); // Debounce with a wait of 50ms
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check on page load
+    handleScroll();
+
+
+    // --- Smooth Scroll for Navigation Links ---
+    smoothScrollLinks.forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -223,16 +280,11 @@
       });
     });
 
-    // Add hover effects to cards
-    document.querySelectorAll('.product-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
-    });
+    // --- Add Hover Effects to Cards (using CSS for smoother transitions) ---
+    // Instead of JS, we can add CSS rules for .product-card:hover in styles/index.css
+    // The existing CSS in styles/index.css for .product-card:hover seems sufficient.
+    // If you want a different hover effect, define it in CSS.
+
   </script>
 </body>
 </html>
