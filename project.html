@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arc Dezine Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
   <link rel="stylesheet" href="styles/project.css">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
   
@@ -14,30 +18,45 @@
   <header id="siteHeader">
     <div class="container">
       <nav>
-        <a href="index.html" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo" ></a>
         
-        <!-- Navigation Links -->
-        <ul class="navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="interior.html">Interior</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="phone-button">+91 98996 24693</button>
-      </nav>
-    </div>
-  </header>
+        
+        <!-- Hamburger Menu Icon (for mobile) -->
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
 
-  <!-- Mobile Navigation Menu (hidden by default, slides in) -->
-        <div class="mobile-nav-menu" id="mobileNavMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="interior.html">Interior</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Ensure these links match your desktop menu -->
-            </ul>
-        </div>
+      <!-- Logo -->
+      <a href="#" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo" alt=""></a>
+      
+      <!-- Desktop Navigation Links (hidden on mobile) -->
+      <ul class="navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interior.html">Interior</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Phone Icon/Button (for mobile and desktop) -->
+      <a href="tel:+919899624693" class="phone-icon" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+
+      <!-- Original Phone Button (hidden on mobile, shown on desktop) -->
+      <button class="phone-button">+91 98996 24693</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Navigation Menu (hidden by default, slides in) -->
+      <div class="mobile-nav-menu" id="mobileNavMenu">
+          <ul>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="interior.html">Interior</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <!-- Ensure these links match your desktop menu -->
+          </ul>
+      </div>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -143,5 +162,5 @@
     </div>
   </footer>
   <script src="scripts/projectpage.js "type=module></script>
-
-  
+</body>
+</html>

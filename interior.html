@@ -7,34 +7,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="styles/interior.css">
     <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
 </head>
 <body>
     <header id="siteHeader">
         <nav class="container">
-            <a href="index.html" class="navbar-brand">Nishawe</a>
             
-            <ul class="navbar-nav">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="project.html" class="nav-link">Projects</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contacts</a></li>
-            </ul>
-             <button class="phone-button">+91 98996 24693</button>
-        </nav>
-    </header>
+            
+<!-- Hamburger Menu Icon (for mobile) -->
+<button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Mobile Menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-    <!-- Mobile Navigation Menu (hidden by default, slides in) -->
-        <div class="mobile-nav-menu" id="mobileNavMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Ensure these links match your desktop menu -->
-            </ul>
-        </div>
+<a href="index.html" class="navbar-brand logo ">Nishawe</a>
+
+<!-- Desktop Navigation Links (hidden on mobile) -->
+<ul class="navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="project.html">Projects</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<!-- Phone Icon/Button (for mobile and desktop) -->
+<a href="tel:+919899624693" class="phone-icon" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+
+<!-- Original Phone Button (hidden on mobile, shown on desktop) -->
+<button class="phone-button">+91 98996 24693</button>
+</nav>
+</div>
+</header>
+
+<!-- Mobile Navigation Menu (hidden by default, slides in) -->
+<div class="mobile-nav-menu" id="mobileNavMenu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Ensure these links match your desktop menu -->
+    </ul>
+</div>
 
     <section id="hero" class="hero-section">
         <div class="hero-image-slider">
