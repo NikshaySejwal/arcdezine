@@ -7,7 +7,7 @@ projects.forEach((project)=>{
     // Assuming project.images is an array of image URLs
     project.image.forEach((imageSrc, index) => {
         projectImagesHTML += `
-            <img src="${imageSrc}" class="popup-img project-slide ${index === 0 ? 'active' : ''}" alt="${project.name} - Image ${index + 1}">
+            <img src="${imageSrc}" loading="lazy" class="popup-img project-slide ${index === 0 ? 'active' : ''}" alt="${project.name} - Image ${index + 1}">
         `;
     });
 

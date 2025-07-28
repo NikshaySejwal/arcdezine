@@ -6,7 +6,7 @@ products.forEach((product)=>{
     productsHTML+=`
         <div class="product-card" data-category="${product.category}"data-subcategory="${product.subcategory || ''}">
           <div class="product-image">
-            <img src="${product.image}">
+            <img src="${product.image}" loading="lazy">
             
           </div>
           <div class="product-content">
@@ -36,7 +36,6 @@ const subFilterDescriptions = {
 
 
     'parallel': 'Imagine stepping into a galley or parallel modular kitchen, where efficiency meets style in a sleek, narrow space flanked by two walls and a cozy corridor. This layout is a dream come true for any home chef, as it offers a straightforward design without the hassle of awkward corner cabinets. With everything within easy reach, cooking becomes a delightful experience, and the possibilities in this compact yet functional kitchen are endless!',
-
 
     'g-shape': 'Transform your culinary space with a g-shaped modular kitchen design that maximizes every inch for an inviting and spacious atmosphere. The addition of a sleek peninsula not only enhances functionality but also transforms your kitchen into a stylish kitchenette, beautifully framed by three walls of cabinetry. Embrace the perfect blend of practicality and elegance!',
 
@@ -210,7 +209,8 @@ function applyFilters() {
             if (currentSubFilter === 'all' || !currentSubFilter) {
                 // No sub-filter or "all" sub-filter selected
                 showCard = true;
-            } else if (cardSubCategory === currentSubFilter) {
+            }
+         else if (cardSubCategory === currentSubFilter) {
                 // Sub-filter matches
                 showCard = true;
             }
