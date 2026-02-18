@@ -2,16 +2,17 @@ import { products } from '../data/products.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const productsGrid = document.querySelector('.js-products-grid');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const mainFilterButtons = document.querySelectorAll('.main-filters .filter-btn');
+    const subFilterContainers = document.querySelectorAll('.sub-filters > div');
 
-    // 1. Create all product cards once
+    // 1. Create all product cards once and add them to the grid
     let productsHTML = '';
     products.forEach((product) => {
         // Only generate HTML for furniture categories
         if (['chair', 'sofa', 'bed', 'cabinet'].includes(product.category)) {
             const whatsappLink = `https://wa.me/919899731201?text=Hi, I'm interested in the ${product.name}.`;
             productsHTML += `
-                <div class="product-card" data-category="${product.category}">
+                <div class="product-card" data-category="${product.category}" data-subcategory="${product.subcategory}">
                   <div class="product-image">
                     <img src="${product.image}" loading="lazy" alt="${product.name}">
                   </div>
@@ -29,13 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const productCards = document.querySelectorAll('.product-card');
 
-    // 2. Main filter functionality (hide and show)
-    const applyFilter = (filter) => {
+    // 2. Filter functionality
+    const applyFilter = (category, subcategory) => {
         productCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
-            const showCard = (filter === 'all' || cardCategory === filter);
+            const cardSubcategory = card.getAttribute('data-subcategory');
 
-            if (showCard) {
+            const showByCategory = (category === 'all' || cardCategory === category);
+            const showBySubcategory = (subcategory === 'all' || cardSubcategory === subcategory);
+
+            if (showByCategory && showBySubcategory) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
@@ -43,29 +47,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    filterButtons.forEach(button => {
+    // 3. Event Listeners for main filters
+    mainFilterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Manage active classes for main filters
+            mainFilterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            const filterValue = button.getAttribute('data-filter');
-            applyFilter(filterValue);
+
+            const mainFilterValue = button.getAttribute('data-filter');
+
+            // Show/hide relevant sub-filters
+            subFilterContainers.forEach(container => {
+                if (container.getAttribute('data-parent-filter') === mainFilterValue) {
+                    container.classList.remove('hidden');
+                } else {
+                    container.classList.add('hidden');
+                }
+            });
+            // Reset active class on all sub-filter buttons
+            document.querySelectorAll('.sub-filters .filter-btn').forEach(btn => btn.classList.remove('active'));
+
+            // Apply the main filter (showing all subcategories initially)
+            applyFilter(mainFilterValue, 'all');
         });
     });
 
-    // Initial load
-    applyFilter('all');
+    // 4. Event Listeners for sub-filters
+    document.querySelectorAll('.sub-filters .filter-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent main filter click event
+            const parentContainer = button.closest('[data-parent-filter]');
+            const parentFilterValue = parentContainer.getAttribute('data-parent-filter');
 
-    // --- Hamburger Menu Functionality (copied from interior.js) ---
+            // Manage active classes within the same sub-filter group
+            parentContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const subFilterValue = button.getAttribute('data-filter');
+
+            // Apply the combined filter
+            applyFilter(parentFilterValue, subFilterValue);
+        });
+    });
+
+
+    // Initial load: show all products and hide all sub-filters
+    applyFilter('all', 'all');
+    subFilterContainers.forEach(container => container.classList.add('hidden'));
+
+    // --- Hamburger Menu Functionality ---
     const hamburger = document.getElementById('hamburgerMenu');
     const mobileNav = document.getElementById('mobileNavMenu');
 
     if (hamburger && mobileNav) {
         hamburger.addEventListener('click', function() {
-            mobileNav.classList.toggle('open');
+            mobileNav.classList.toggle('hidden');
         });
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
-                mobileNav.classList.remove('open');
+                mobileNav.classList.add('hidden');
             });
         });
     }
