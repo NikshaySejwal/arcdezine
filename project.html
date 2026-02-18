@@ -21,6 +21,7 @@
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="nishawe.html" class="nav-link">Nishawe (Furniture)</a>
+                <a href="interior.html" class="nav-link">Interior Catalogue</a>
                 <a href="project.html" class="nav-link">Projects</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -38,6 +39,7 @@
         <div id="mobileNavMenu" class="md:hidden hidden bg-white py-2">
             <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
             <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
+            <a href="interior.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Interior Catalogue</a>
             <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
             <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
             <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
@@ -48,13 +50,24 @@
 
   <main class="pt-14">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center text-white" 
-             style="background-image: url('images/projects/shoppingmall/1.jpg');">
-      <div class="hero-gradient absolute inset-0"></div>
-      <div class="relative z-10 p-4">
-        <h1 class="text-5xl md:text-6xl font-bold leading-tight">Our Projects</h1>
-        <p class="mt-4 text-xl md:text-2xl">Crafting Spaces, Building Dreams.</p>
-      </div>
+    <section class="relative h-[80vh] text-white">
+        <video 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          class="absolute inset-0 w-full h-full object-cover"
+          poster="background_images/project.jpg"
+          id="hero-video"
+        >
+            <source src="https://videos.pexels.com/video-files/4496289/4496289-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight">Our Projects</h1>
+            <p class="mt-4 text-xl md:text-2xl">Crafting Spaces, Building Dreams.</p>
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -85,6 +98,7 @@
       <p class="text-sm">
         <a href="about.html" class="hover:text-gold">About</a> | 
         <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
+        <a href="interior.html" class="hover:text-gold">Interior Catalogue</a> |
         <a href="project.html" class="hover:text-gold">Projects</a> |
         <a href="contact.html" class="hover:text-gold">Contact</a>
       </p>

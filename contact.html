@@ -63,6 +63,7 @@
         <div class="hidden md:flex items-center space-x-8">
           <a href="index.html" class="nav-link">Home</a>
           <a href="nishawe.html"class= "nav-link"> Nishawe (Furniture)</a>
+          <a href="interior.html" class="nav-link">Interior Catalogue</a>
           <a href="project.html" class="nav-link">Projects</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="contact.html" class="nav-link">Contact</a>
@@ -84,6 +85,7 @@
       <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
         <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
         <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
+        <a href="interior.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Interior Catalogue</a>
         <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
         <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
         <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
@@ -94,14 +96,24 @@
 
   <main class="pt-14">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-gray-800">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.681181111058!2d77.0425!3d28.4226814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22dfefe3f5f3%3A0x6b4733a73a14966!2sArcade%2048%2C%20Sector%2048%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin!4v1678886655555!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="opacity-50"></iframe>
-      <div class="absolute inset-0 flex items-center justify-center text-center">
-        <div class="relative z-10 p-4 reveal bg-black/50 rounded-lg">
-            <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-20 w-auto mx-auto mb-4">
+    <section class="relative h-[80vh] text-white">
+        <video 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          class="absolute inset-0 w-full h-full object-cover"
+          poster="background_images/pexels-seven11nash-380769.jpg"
+          id="hero-video"
+        >
+            <source src="https://videos.pexels.com/video-files/5780514/5780514-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
+            <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-24 w-auto mx-auto mb-6">
             <h1 class="text-4xl md:text-5xl font-bold text-white">Visit Us in Gurugram</h1>
         </div>
-      </div>
     </section>
 
     <!-- Contact Form & Details Section -->
@@ -176,6 +188,7 @@
       <p class="text-sm">
         <a href="about.html" class="hover:text-gold">About</a> | 
         <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
+        <a href="interior.html" class="hover:text-gold">Interior Catalogue</a> |
         <a href="project.html" class="hover:text-gold">Projects</a> |
         <a href="contact.html" class="hover:text-gold">Contact</a>
       </p>
