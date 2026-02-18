@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach((product) => {
         // Only generate HTML for furniture categories
         if (['chair', 'sofa', 'bed', 'cabinet'].includes(product.category)) {
-            const whatsappLink = `https://wa.me/919899731201?text=Hi, I'm interested in the ${product.name}.`;
+            const whatsappLink = `https://wa.me/919899624693?text=Hi, I'm interested in the ${product.name}.`;
             productsHTML += `
                 <div class="product-card" data-category="${product.category}" data-subcategory="${product.subcategory}">
                   <div class="product-image">
