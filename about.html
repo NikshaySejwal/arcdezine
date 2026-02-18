@@ -1,338 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - ARC Dezine</title>
-    
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Arcdezine Delhi NCR | Nishawe Furniture Gurugram</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preload" as="image" href="images/logo/logo3.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Arcdezine",
+      "image": "https://example.com/images/logo/logo3.jpg",
+      "@id": "",
+      "url": "https://example.com",
+      "telephone": "+919899731201",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Floor,Syndicate Realtors,Arcade-48, near Central Park II, Sector 48",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122001",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/arcdezineofficial"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-cream text-charcoal">
 
-<body>
-    <!-- Header -->
-  <header id="siteHeader">
-    <div class="container">
-      <nav>
-        <a href="#" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo"></a>
+  <!-- Header -->
+  <header class="glass-nav fixed w-full z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex justify-between items-center h-14">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex-shrink-0">
+          <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-10 w-auto logo-img">
+        </a>
         
-        <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-          <li><a href="project.html">Projects</a></li>
-          <li><a href="interior.html">Interior</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="phone-button">+91 98996 24693</button>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="relative dropdown">
+            <button class="nav-link inline-flex items-center">
+              Nishawe (Furniture)
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48">
+              <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">All Furniture</a>
+              <a href="nishawe.html?category=chairs" class="block px-4 py-2 text-charcoal hover:bg-cream">Chairs</a>
+              <a href="nishawe.html?category=sofas" class="block px-4 py-2 text-charcoal hover:bg-cream">Sofas</a>
+              <a href="nishawe.html?category=beds" class="block px-4 py-2 text-charcoal hover:bg-cream">Beds</a>
+              <a href="nishawe.html?category=cabinets" class="block px-4 py-2 text-charcoal hover:bg-cream">Cabinets</a>
+            </div>
+          </div>
+          <a href="project.html" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="https://wa.me/919899731201" target="_blank" class="btn-gold flex items-center space-x-2">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-charcoal focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
       </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+        <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
+        <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
+        <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
+        <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
+        <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
+        <a href="https://wa.me/919899731201" target="_blank" class="block px-4 py-2 text-charcoal hover:bg-cream">WhatsApp</a>
+      </div>
     </div>
   </header>
 
-
-  <!-- Mobile Navigation Menu (hidden by default, slides in) -->
-        <div class="mobile-nav-menu" id="mobileNavMenu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="interior.html">Interior</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Ensure these links match your desktop menu -->
-            </ul>
-        </div>
-
-    <!-- hero section -->
-
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>About ARC dezine</h1>
-            <p>Transforming spaces into works of art through innovative architecture and interior design</p>
-        </div>
-       
+  <main class="pt-14">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center text-white" 
+             style="background-image: url('images/team/team-hero.jpg');">
+      <div class="hero-gradient absolute inset-0"></div>
+      <div class="relative z-10 p-4 reveal">
+        <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-20 w-auto mx-auto mb-4">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight">Delhi NCR Design Leaders</h1>
+        <p class="mt-4 text-xl md:text-2xl">Meet the creative minds behind Arcdezine.</p>
+      </div>
     </section>
 
-    <main class="main-content">
-        <div class="container">
-            <!-- Company Story -->
-            <section class="section">
-                <h2 class="section-title">Our Story</h2>
-                <div class="company-story">
-                    <div class="story-content">
-                        <h3>Navigating the Intersection of Architecture, Planning, and Interior Design</h3>
-                        <p>Since our establishment in 2015, ARC DESIGN has been a trusted name in the world of interior design, architecture, and construction. With a dedicated team of over 20 passionate professionals, we have been transforming spaces into works of art that seamlessly blend form and function.</p>
-                        <p>Our commitment to excellence and creativity has earned us the trust of over 1000 satisfied customers, making us a leader in innovative design solutions.</p>
-                    </div>
-                    <div class="story-image">
-                        <i class="fas fa-building"></i>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Stats Section -->
-            <section class="stats">
-                <div class="container">
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">2020</div>
-                            <div class="stat-label">Established</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-label">Team Members</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1000+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">200+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Founder Section -->
-            <section class="founder-section">
-                <div class="container">
-                    <h2 class="section-title">Meet Our Founder</h2>
-                    <div class="founder-content">
-                        <div class="founder-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="founder-bio">
-                            <h3>Ar. Nishant Singh</h3>
-                            <div class="title">Founder & Principal Architect</div>
-                            <p>Hello, I'm Ar. Nishant Singh, and I'm on a mission to continually expand my expertise in architecture, planning, and interior design at a professional level. With a firm belief in dedication, hard work, and a relentless eagerness to learn, I bring value to any team I'm a part of.</p>
-                            <p>My academic journey commenced at the Manav Rachna International Institute of Research & Studies, where I pursued a Bachelor's degree in Architecture, before delving into interior design and then returning to architecture. This diverse educational background has provided me with a comprehensive understanding of spatial design principles from various perspectives.</p>
-                            <p>Beyond my professional interests, I'm deeply passionate about cricket, sketching, web series, PC games, and music, all of which serve as wellsprings of creativity and inspiration.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="skills-section">
-                <div class="container">
-                    <h2 class="section-title">Our Expertise</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <i class="fas fa-drafting-compass"></i>
-                            </div>
-                            <h4>Design Software</h4>
-                            <ul class="skill-list">
-                                <li>AutoCAD</li>
-                                <li>SketchUp</li>
-                                <li>Lumion</li>
-                                <li>Revit</li>
-                                <li>Photoshop</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h4>Project Types</h4>
-                            <ul class="skill-list">
-                                <li>Shopping Complexes</li>
-                                <li>Residential Spaces</li>
-                                <li>Commercial Buildings</li>
-                                <li>Interior Design</li>
-                                <li>Urban Planning</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <div class="skill-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <h4>Specializations</h4>
-                            <ul class="skill-list">
-                                <li>Sustainable Design</li>
-                                <li>Space Planning</li>
-                                <li>3D Visualization</li>
-                                <li>Project Management</li>
-                                <li>Research & Development</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Timeline -->
-            <section class="section">
-                <h2 class="section-title">Our Journey</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2015</div>
-                            <h4>Company Founded</h4>
-                            <p>ARC DESIGN was established with a vision to transform spaces through innovative design solutions.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2017</div>
-                            <h4>Team Expansion</h4>
-                            <p>Grew our team to include specialized professionals in architecture, interior design, and project management.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2020</div>
-                            <h4>1000+ Clients Milestone</h4>
-                            <p>Reached a significant milestone of serving over 1000 satisfied clients across various project types.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025</div>
-                            <h4>Continued Innovation</h4>
-                            <p>Continuing to push boundaries in sustainable design and innovative architectural solutions.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <!-- Team Section -->
+    <section class="py-16 bg-cream reveal">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card-hover text-center">
+            <img src="images/team/member1.jpg" alt="Team Member 1" class="w-full h-80 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Nikshay sejwal</h3>
+              <p class="text-gold">Founder & Principal Architect</p>
+            </div>
+          </div>
+          <div class="card-hover text-center">
+            <img src="images/team/member2.jpg" alt="Team Member 2" class="w-full h-80 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">shashank tyagi</h3>
+              <p class="text-gold">Lead Interior Designer</p>
+            </div>
+          </div>
+          <div class="card-hover text-center">
+            <img src="images/team/member3.jpg" alt="Team Member 3" class="w-full h-80 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Abhishek yadav</h3>
+              <p class="text-gold">Project Manager</p>
+            </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h3>Ready to Transform Your Space?</h3>
-                <p>Let's work together to bring your architectural dreams to life</p>
-                <!-- Contact Section -->
-            <section id="contact" class="section-padding">
-                <div class="container">
-                <h2 class="section-title">Contact Us</h2>
-                <p>
-                    Have a project in mind or just want to say hello? Reach out to us!
-                </p>
-                <div class="image-row-grid">
-                    <div class="image-row-item">
-                    <div class="image-row-description">
-                        <p><strong>Email:</strong> arcdezine27@gmail.com</p>
-                        <p><strong>Instagram</strong>arcdezineofficial</p>
-                        <p><strong>Phone:</strong> +91 98997 31201, +91 88103 17784, +91 98996 24693</p>
-                        <p><strong>Location:</strong> 3rd Floor,Syndicate Realtors,Arcade-48, near Central Park II, Sector 48, Gurugram, Haryana 122001 </p>
-                    </div>
-                    </div>
-                    <div class="image-row-item">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.1618924028526!2d77.038271!3d28.4226814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190e9ab62e85%3A0x5a06e1fbffe6188a!2sARCADE%20-48!5e1!3m2!1sen!2sin!4v1750854415189!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    
+    <!-- Detailed Services List -->
+    <section class="py-16 bg-white reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Expertise</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row items-center gap-8 card-hover p-8">
+                    <img src="images/Architecture_Planning.jpg" alt="Architecture" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gold mb-4">Architecture & Planning</h3>
+                        <p>We provide comprehensive architectural services from concept to completion. Our process includes site analysis, schematic design, design development, construction documentation, and project management. We focus on creating sustainable and contextually relevant designs that stand the test of time.</p>
                     </div>
                 </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 card-hover p-8">
+                    <img src="images/Interior_Design.jpg" alt="Interior Design" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gold mb-4">Interior Design</h3>
+                        <p>Our interior design services are tailored to create spaces that are both beautiful and functional. We handle everything from space planning and furniture selection to lighting design and material specification. Our goal is to create a cohesive and personalized environment that reflects your lifestyle.</p>
+                    </div>
                 </div>
-            </section>
+                 <div class="flex flex-col md:flex-row items-center gap-8 card-hover p-8">
+                    <img src="images/Custom_Furniture_Manufacturing.jpg" alt="Furniture" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gold mb-4">Nishawe Furniture</h3>
+                        <p>With our in-house furniture brand, Nishawe, we design and manufacture custom pieces that perfectly complement our architectural and interior projects. This integrated approach ensures seamless quality control and a truly unique aesthetic for your space, from bespoke sofas to handcrafted tables.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <script>
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-cream reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-hover p-8">
+                    <p class="text-lg italic mb-4">"Arcdezine transformed our house into a home. Their attention to detail and commitment to quality is unparalleled. We couldn't be happier with the result!"</p>
+                    <p class="font-bold text-gold">- A. Sharma, Gurugram</p>
+                </div>
+                <div class="card-hover p-8">
+                    <p class="text-lg italic mb-4">"The team at Arcdezine is incredibly talented and professional. They listened to our vision and brought it to life, exceeding our expectations at every turn."</p>
+                    <p class="font-bold text-gold">- R. Singh, Delhi</p>
+                </div>
+                <div class="card-hover p-8">
+                    <p class="text-lg italic mb-4">"From the initial concept to the final handover, the process was seamless. Their in-house furniture is a game-changer! Highly recommended."</p>
+                    <p class="font-bold text-gold">- P. Mehta, Noida</p>
+                </div>
+                <div class="card-hover p-8">
+                    <p class="text-lg italic mb-4">"A young, creative, and highly efficient team. They delivered our project on time and within budget, with stunning results. Thank you, Arcdezine!"</p>
+                    <p class="font-bold text-gold">- S. Khan, Faridabad</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // --- Hamburger Menu Functionality ---
-    const hamburger = document.getElementById('hamburgerMenu');
-    const mobileNav = document.getElementById('mobileNavMenu');
+  </main>
 
-    if (hamburger && mobileNav) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('open');
-            // Removed body.no-scroll toggle as it's no longer a full-screen overlay
-        });
+  <!-- WhatsApp Sticky Button -->
+  <a href="https://wa.me/919899731201" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
 
-        // Close mobile menu when a link is clicked
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('open');
-            });
-        });
-    }
+  <!-- Footer -->
+  <footer class="bg-charcoal text-cream py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">&copy; <span id="currentYear">2025</span> Arcdezine. All rights reserved.</p>
+      <p class="text-sm">
+        <a href="about.html" class="hover:text-gold">About</a> | 
+        <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
+        <a href="project.html" class="hover:text-gold">Projects</a> |
+        <a href="contact.html" class="hover:text-gold">Contact</a>
+      </p>
+      <p class="text-xs mt-4">Chairs Delhi NCR, Sofas Gurugram, House Renovation Noida, Interior Design Gurgaon, Architecture Delhi, Custom Furniture India</p>
+    </div>
+  </footer>
 
-    // Close mobile menu if window is resized to desktop size
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) { // Matches your @media (min-width: 768px) breakpoint
-            if (hamburger) hamburger.classList.remove('active');
-            if (mobileNav) mobileNav.classList.remove('open');
-        }
-    });
-
-
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Animate stats on scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const finalNumber = stat.textContent;
-                        let currentNumber = 0;
-                        const increment = finalNumber.includes('+') ? 
-                            parseInt(finalNumber) / 50 : 
-                            parseInt(finalNumber) / 50;
-                        
-                        const timer = setInterval(() => {
-                            currentNumber += increment;
-                            if (currentNumber >= parseInt(finalNumber)) {
-                                stat.textContent = finalNumber;
-                                clearInterval(timer);
-                            } else {
-                                stat.textContent = Math.floor(currentNumber) + (finalNumber.includes('+') ? '+' : '');
-                            }
-                        }, 30);
-                    });
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe stats section
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
-
-        // Add scroll reveal animation to timeline items
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.3 });
-
-        timelineItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'all 0.6s ease';
-            timelineObserver.observe(item);
-        });
-    </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

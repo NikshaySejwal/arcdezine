@@ -3,164 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arc Dezine Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="styles/project.css">
+  <title>Arcdezine Projects Delhi NCR | Commercial, Villas, Showrooms</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-  <!-- Enhanced Header -->
-  <header id="siteHeader">
-    <div class="container">
-      <nav>
-        
-        
-        <!-- Hamburger Menu Icon (for mobile) -->
-        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Mobile Menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-      </button>
+<body class="bg-cream text-charcoal">
 
-      <!-- Logo -->
-      <a href="#" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo" alt=""></a>
-      
-      <!-- Desktop Navigation Links (hidden on mobile) -->
-      <ul class="navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="interior.html">Interior</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Phone Icon/Button (for mobile and desktop) -->
-      <a href="tel:+919899624693" class="phone-icon" aria-label="Call Us"><i class="fas fa-phone"></i></a>
-
-      <!-- Original Phone Button (hidden on mobile, shown on desktop) -->
-      <button class="phone-button">+91 98996 24693</button>
-    </nav>
-  </div>
-</header>
-
-<!-- Mobile Navigation Menu (hidden by default, slides in) -->
-      <div class="mobile-nav-menu" id="mobileNavMenu">
-          <ul>
-              <li><a href="project.html">Projects</a></li>
-              <li><a href="interior.html">Interior</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <!-- Ensure these links match your desktop menu -->
-          </ul>
-      </div>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-image">
-      <img src="background_images/project.jpg"alt="hero-image" >
-    </div>
-    <div class="hero-content">
-      <h1>Our Project Portfolio</h1>
-      <p>Discover the spaces we've transformed and the dreams we've brought to life</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      
-      <!-- Filter Navigation -->
-      <div class="filter-nav">
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="residential">Residential</button>
-          <button class="filter-btn" data-filter="retail">Retail</button>
-          <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-          <button class="filter-btn" data-filter="workspace">Workspace</button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid js-projects-grid">
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Project Section -->
-  <!-- <section class="container">
-    <div class="featured-project">
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2>Project Spotlight</h2>
-          <p>Our award-winning Modern Luxury Villa represents the pinnacle of contemporary residential design. This project challenged us to create a home that seamlessly blends indoor and outdoor living while maintaining privacy and luxury.</p>
-          <p>The design features sustainable materials, smart home technology, and custom-designed furniture pieces that reflect the client's sophisticated taste and lifestyle requirements.</p>
-          <div class="featured-stats">
-            <div class="stat-item">
-              <span class="stat-number">18</span>
-              <span class="stat-label">Months Design</span>
+  <!-- Header -->
+  <header class="glass-nav fixed w-full z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex justify-between items-center h-14">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-10 w-auto logo-img">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="nishawe.html" class="nav-link">Nishawe (Furniture)</a>
+                <a href="project.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://wa.me/919899731201" target="_blank" class="btn-gold flex items-center space-x-2">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">4.5K</span>
-              <span class="stat-label">Sq Ft Area</span>
+            <div class="md:hidden flex items-center">
+                <button id="hamburgerMenu" class="text-charcoal focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m4 6h16"></path></svg>
+                </button>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">2024</span>
-              <span class="stat-label">Award Winner</span>
-            </div>
-          </div>
+        </nav>
+        <div id="mobileNavMenu" class="md:hidden hidden bg-white py-2">
+            <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
+            <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
+            <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
+            <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
+            <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
+            <a href="httpsa://wa.me/919899731201" target="_blank" class="block px-4 py-2 text-charcoal hover:bg-cream">WhatsApp</a>
         </div>
-        <div class="featured-image">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Featured Project">
-        </div>
-      </div>
     </div>
-  </section> -->
+  </header>
 
-  <!-- CTA Section -->
-  <section class="container">
-    <div class="cta-section">
-      <h2>Ready to Start Your Project?</h2>
-      <p>Let's discuss how we can transform your space into something extraordinary</p>
-      
-    </div>
-  </section>
-  <section id="contact" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p>
-        Have a project in mind or just want to say hello? Reach out to us!
+  <main class="pt-14">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center text-white" 
+             style="background-image: url('images/projects/shoppingmall/1.jpg');">
+      <div class="hero-gradient absolute inset-0"></div>
+      <div class="relative z-10 p-4">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight">Our Projects</h1>
+        <p class="mt-4 text-xl md:text-2xl">Crafting Spaces, Building Dreams.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center flex-wrap gap-4 mb-12">
+                <button class="filter-btn btn-gold active" data-filter="all">All</button>
+                <button class="filter-btn btn-gold" data-filter="commercial">Commercial</button>
+                <button class="filter-btn btn-gold" data-filter="villa">Villas</button>
+                <button class="filter-btn btn-gold" data-filter="showroom">Showrooms</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 js-projects-grid">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Sticky Button -->
+  <a href="https://wa.me/919899731201" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-cream py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">&copy; <span id="currentYear"></span> Arcdezine. All rights reserved.</p>
+      <p class="text-sm">
+        <a href="about.html" class="hover:text-gold">About</a> | 
+        <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
+        <a href="project.html" class="hover:text-gold">Projects</a> |
+        <a href="contact.html" class="hover:text-gold">Contact</a>
       </p>
-      <div class="image-row-grid">
-        <div class="image-row-item">
-          <div class="image-row-description">
-            <p><strong>Email:</strong> arcdezine27@gmail.com</p>
-            <p><strong>Instagram:</strong>arcdezineofficial</p>
-            <p><strong>Phone:</strong> +91 88103 17784, +91 98996 24693</p>
-            <p><strong>Location:</strong>3rd Floor,Syndicate Realtors,Arcade-48, near Central Park II, Sector 48, Gurugram, Haryana 122001 </p>
-          </div>
-        </div>
-        <div class="image-row-item">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.1618924028526!2d77.038271!3d28.4226814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190e9ab62e85%3A0x5a06e1fbffe6188a!2sARCADE%20-48!5e1!3m2!1sen!2sin!4v1750854415189!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-
-   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="currentYear">2025</span> ARC DEZINE. All rights reserved.</p>
-      <p><a href="about.html">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
-      <!-- Contact Section -->
-  
     </div>
   </footer>
-  <script src="scripts/projectpage.js "type=module></script>
+
+<script type="module" src="scripts/projectpage.js"></script>
+
 </body>
 </html>

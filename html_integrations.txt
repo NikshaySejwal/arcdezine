@@ -1,0 +1,53 @@
+Here is a summary of the integrations for each HTML file:
+
+**`about.html`**:
+*   **CSS:**
+    *   `https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css`
+    *   `css/style.css`
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css`
+*   **JavaScript:**
+    *   `js/main.js`
+
+**`contact.html`**:
+*   **CSS:**
+    *   `https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css`
+    *   `css/style.css`
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css`
+*   **JavaScript:**
+    *   `js/main.js`
+
+**`index.html`**:
+*   **CSS:**
+    *   `https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css`
+    *   `css/style.css`
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css`
+*   **JavaScript:**
+    *   `js/projects-data.js`
+    *   `js/main.js`
+    *   `js/products.js`
+    *   Embedded script for populating featured products and project teasers.
+
+**`interior.html`**:
+*   **CSS:**
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css`
+    *   `styles/interior.css`
+*   **JavaScript:**
+    *   `scripts/interior.js`
+
+**`nishawe.html`**:
+*   **CSS:**
+    *   `https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css`
+    *   `css/style.css`
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css`
+    *   Embedded styles for product grid and cards.
+*   **JavaScript:**
+    *   `js/main.js`
+    *   `scripts/nishawe-new.js`
+
+**`project.html`**:
+*   **CSS:**
+    *   `https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css`
+    *   `css/style.css`
+    *   `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css`
+*   **JavaScript:**
+    *   `scripts/projectpage.js`

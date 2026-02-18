@@ -3,285 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arc dezine</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <title>Nishawe Furniture Delhi NCR | Arcdezine Gurugram</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="preload" as="image" href="images/logo/logo3.jpg">
+  <link rel="preload" as="image" href="images/villa/villa1.webp" media="(max-width: 640px)">
+  <link rel="preload" as="image" href="images/hero-lg.webp" media="(min-width: 641px)">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Arcdezine",
+      "image": "https://arcdezine.in/images/logo/logo3.jpg",
+      "@id": "",
+      "url": "https://arcdezine.in",
+      "telephone": "+919899731201",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Floor,Syndicate Realtors,Arcade-48, near Central Park II, Sector 48",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122001",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/arcdezineofficial"
+      ] 
+    }
+  </script>
 </head>
-<body>
+<body class="bg-cream text-charcoal">
 
   <!-- Header -->
-  <header id="siteHeader">
-    <div class="container">
-      <nav>
-
-        <!-- Hamburger Menu Icon (for mobile) -->
-        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Mobile Menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
+  <header class="glass-nav fixed w-full z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex justify-between items-center h-14">
         <!-- Logo -->
-        <a href="index.html" class="navbar-brand"><img src="images/logo/logo3.jpg" class="logo" alt=""></a>
+        <a href="index.html" class="flex-shrink-0">
+          <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-10 w-auto logo-img">
+        </a>
         
-        <!-- Desktop Navigation Links (hidden on mobile) -->
-        <ul class="navbar-nav">
-          <li><a href="project.html">Projects</a></li>
-          <li><a href="interior.html">Interior</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="interior.html" class="nav-link">Nishawe (Furniture)</a>
+          <a href="project.html" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="https://wa.me/919899731201" target="_blank" class="btn-gold flex items-center space-x-2">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
 
-        <!-- Phone Icon/Button (for mobile and desktop) -->
-        <a href="tel:+919899624693" class="phone-icon" aria-label="Call Us"><i class="fas fa-phone"></i></a>
-
-        <!-- Original Phone Button (hidden on mobile, shown on desktop) -->
-        <button class="phone-button">+91 98996 24693</button>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-charcoal focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
       </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+        <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
+        <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
+        <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
+        <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
+        <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
+        <a href="https://wa.me/919899731201" target="_blank" class="block px-4 py-2 text-charcoal hover:bg-cream">WhatsApp</a>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation Menu (hidden by default, slides in) -->
-        <div class="mobile-nav-menu" id="mobileNavMenu">
-            <ul>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="interior.html">Interior</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Ensure these links match your desktop menu -->
-            </ul>
-        </div>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-image">
-      <img src="background_images/home.jpg"
-           
-           alt="Hero Image">
-    </div>
-    <div class="hero-content">
-      <h1>Empowering Dreams</h1>
-      <p>Your dream space, designed and delivered with passion and precision.</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <p>
-        At Arc Dezine, we specialize in crafting elegant, functional, and personalized spaces. With over a years of design excellence, our team turns visions into reality—whether it's your home, office, or commercial environment.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="grid">
-        <div class="product-card">
-          <div><img src="images/Architecture_Planning.jpg" alt="" loading="lazy">
-          </div>
-          <div class="card-content">
-            <h3>Architecture & Planning</h3>
-            <p>From site planning to detailed architectural layouts, we offer end-to-end design services for residential and commercial spaces.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div ><img src="images/Interior_Design.jpg" alt="" loading="lazy"></div>
-          <div class="card-content">
-            <h3>Interior Design</h3>
-            <p>Tailored interior solutions with mood boards, 3D visuals, material selection, and on-site styling.</p>
-          </div>
-        </div>
-        <div class="product-card">
-          <div ><img src="images/Custom_Furniture_Manufacturing.jpg" alt="" loading="lazy"></div>
-          <div class="card-content">
-            <h3>Custom Furniture Manufacturing</h3>
-            <p>Designed and manufactured in-house, our furniture pieces offer a blend of style, comfort, and durability.</p>
-          </div>
-        </div>
+  <main class="pt-14">
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center text-center text-white" style="background-image: url('images/hero-lg.webp');">
+      <div class="hero-gradient absolute inset-0"></div>
+      <div class="relative z-10 p-4 reveal">
+        <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-24 w-auto mx-auto mb-6">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">Nishawe Furniture & Architecture</h1>
+        <p class="mt-4 text-xl md:text-2xl">Luxury Living, Crafted in Delhi NCR.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="why-choose-us" class="section-padding">
-      <div class="container">
-          <h2 class="section-title">Why Choose Us?</h2>
-          <p class="section-intro-text">Choosing the right partner for your space means choosing confidence and exceptional results. Here's what sets us apart:</p>
-          <div class="reasons-grid">
-              <div class="reason-card">
-                  <h3>✨ Fresh Perspectives</h3>
-                  <p>Our <strong>young and creative team</strong> brings fresh design thinking and meticulous attention to every detail, ensuring your space feels truly unique.</p>
-              </div>
-              <div class="reason-card">
-                  <h3>🏆 Proven Excellence</h3>
-                  <p>With <strong>over 250 successful projects</strong> spanning homes, offices, and retail spaces, our expertise is not just promised—it's proven.</p>
-              </div>
-              <div class="reason-card">
-                  <h3>🛠️ Quality, Crafted In-House</h3>
-                  <p>From furniture to modular units, every piece is <strong>crafted in our own facility</strong>. This means unparalleled quality control, precision, and the flexibility for complete customization.</p>
-              </div>
-              <div class="reason-card">
-                  <h3>💡 Your Vision, Realized</h3>
-                  <p>We specialize in <strong>personalized designs</strong>, ensuring every project perfectly reflects your unique personality and lifestyle.</p>
-              </div>
-              <div class="reason-card">
-                  <h3>⏰ Seamless & Punctual Delivery</h3>
-                  <p>Because we manage both <strong>design and execution under one roof</strong>, we guarantee on-time delivery without compromising on quality. No delays, just exceptional results.</p>
-              </div>
-              <div class="reason-card">
-                <h3>💬 Seamless Communication</h3>
-                <p>We believe in clear and open dialogue from concept to completion, keeping you informed and involved every step of the way.</p>
+    <!-- Featured Products Section -->
+    <section id="featured-products" class="py-16 bg-cream reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured in Nishawe</h2>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product cards will be inserted here by JS -->
             </div>
+            <div class="text-center mt-12">
+                <a href="nishawe.html" class="btn-gold">Explore Full Collection</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white reveal">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="card-hover p-8">
+            <i class="fas fa-drafting-compass text-gold text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Architecture</h3>
+            <p>Innovative and sustainable architectural design from concept to completion.</p>
           </div>
-      </div>
-  </section>
-
-
-  <section id="contact" class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p>
-        Have a project in mind or just want to say hello? Reach out to us!
-      </p>
-      <div class="image-row-grid">
-        <div class="image-row-item">
-          <div class="image-row-description">
-            <p><strong>Email:</strong> arcdezine27@gmail.com</p>
-            <p><strong>Instagram:</strong>arcdezineofficial</p>
-            <p><strong>Phone:</strong>  +91 88103 17784, +91 98996 24693</p>
-            <p><strong>Location:</strong>3rd Floor,Syndicate Realtors,Arcade-48, near Central Park II, Sector 48, Gurugram, Haryana 122001 </p>
+          <div class="card-hover p-8">
+            <i class="fas fa-couch text-gold text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Interior Design</h3>
+            <p>Personalized interior solutions that blend aesthetics with functionality.</p>
+          </div>
+          <div class="card-hover p-8">
+            <i class="fas fa-chair text-gold text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Custom Furniture</h3>
+            <p>Bespoke furniture from our in-house brand, Nishawe, crafted to perfection.</p>
+          </div>
+          <div class="card-hover p-8">
+            <i class="fas fa-home text-gold text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Renovation</h3>
+            <p>Transforming spaces with high-quality renovations and project management.</p>
           </div>
         </div>
-        <div class="image-row-item">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.1618924028526!2d77.038271!3d28.4226814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190e9ab62e85%3A0x5a06e1fbffe6188a!2sARCADE%20-48!5e1!3m2!1sen!2sin!4v1750854415189!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          
+      </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-charcoal text-white reveal">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <span class="counter text-5xl font-bold" data-target="250">0</span>+
+            <p class="text-lg mt-2">Projects Completed</p>
+          </div>
+          <div>
+            <span class="text-5xl font-bold">Delhi NCR</span>
+            <p class="text-lg mt-2">Primary Service Area</p>
+          </div>
+          <div>
+            <span class="counter text-5xl font-bold" data-target="100">0</span>%
+            <p class="text-lg mt-2">Client Satisfaction</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Projects Teaser Section -->
+    <section id="projects-teaser" class="py-16 bg-cream reveal">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Recent Work</h2>
+            <div id="projects-grid-teaser" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Project teasers will be dynamically inserted here -->
+            </div>
+            <div class="text-center mt-12">
+                <a href="project.html" class="btn-gold">View All Projects</a>
+            </div>
+        </div>
+    </section>
 
-  
+    <!-- CTA Section -->
+    <section class="py-16 bg-white reveal">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Ready to Create Your Dream Space?</h2>
+        <p class="mt-4 text-lg text-charcoal-light">Let's discuss your project. We serve Delhi, Gurugram, Noida, and beyond.</p>
+        <div class="mt-8">
+          <a href="contact.html" class="btn-gold">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp Sticky Button -->
+  <a href="https://wa.me/919899731201" target="_blank" class="whatsapp-sticky">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="currentYear">2025</span> ARC DEZINE. All rights reserved.</p>
-      <p><a href="about.html">About</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
-      <!-- Contact Section -->
-  
+  <footer class="bg-charcoal text-cream py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">&copy; <span id="currentYear">2025</span> Arcdezine. All rights reserved.</p>
+      <p class="text-sm">
+        <a href="about.html" class="hover:text-gold">About</a> | 
+        <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
+        <a href="project.html" class="hover:text-gold">Projects</a> |
+        <a href="contact.html" class="hover:text-gold">Contact</a>
+      </p>
+      <p class="text-xs mt-4">Keywords: Chairs Delhi NCR, Sofas Gurugram, House Renovation Noida, Interior Design Gurgaon, Architecture Delhi, Custom Furniture India, Best Interior Designer Gurugram, Villa Design Delhi, Commercial Architects Noida, Luxury Furniture Gurugram.</p>
     </div>
   </footer>
 
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
   <script>
-
-    // --- Helper Functions ---
-    // Debounce function to limit how often a function is called
-    function debounce(func, wait) {
-        let timeout;
-        return function() {
-            const context = this;
-            const args = arguments;
-            const later = function() {
-                timeout = null;
-                func.apply(context, args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // --- DOM Elements ---
-    const hamburger = document.getElementById('hamburgerMenu');
-    const mobileNav = document.getElementById('mobileNavMenu');
-    const siteHeader = document.getElementById('siteHeader');
-    const currentYearSpan = document.getElementById('currentYear');
-    const productCards = document.querySelectorAll('.product-card');
-    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-
-    // --- Hamburger Menu Functionality ---
-    if (hamburger && mobileNav) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('open');
-            // Toggle aria-expanded for accessibility
-            const isExpanded = hamburger.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-             // Optional: Add/remove class to body to prevent scrolling
-             // document.body.classList.toggle('no-scroll', isExpanded);
-        });
-
-        // Use event delegation for mobile menu links
-        mobileNav.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A') {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('open');
-                 // Optional: Remove body.no-scroll class
-                 // document.body.classList.remove('no-scroll');
-            }
-        });
-    }
-
-    // Close mobile menu if window is resized to desktop size
-    window.addEventListener('resize', debounce(function() {
-        if (window.innerWidth >= 768) { // Matches your @media (min-width: 768px) breakpoint
-            if (hamburger) {
-                hamburger.classList.remove('active');
-                 hamburger.setAttribute('aria-expanded', 'false');
-            }
-            if (mobileNav) {
-                 mobileNav.classList.remove('open');
-                 // Optional: Remove body.no-scroll class
-                 // document.body.classList.remove('no-scroll');
-            }
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Populate Featured Products ---
+        const productGrid = document.getElementById('product-grid');
+        if (productGrid && typeof products !== 'undefined') {
+            const featuredProducts = products.slice(0, 6);
+            featuredProducts.forEach(p => {
+                const card = `
+                    <div class="card-hover overflow-hidden">
+                        <a href="nishawe.html?product=${p.name.replace(/\s+/g, '-')}" class="block">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold">${p.name}</h3>
+                                <p class="text-charcoal-light mt-2">${p.description.substring(0, 50)}...</p>
+                                <span class="text-gold font-semibold mt-4 block">View Details</span>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                productGrid.innerHTML += card;
+            });
         }
-    }, 100)); // Debounce with a wait of 100ms
 
-    // --- Set Current Year ---
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-
-    // --- Header Scroll Effect ---
-    const handleScroll = debounce(function() {
-        if (siteHeader) {
-            if (window.scrollY > 100) {
-                siteHeader.classList.add('scrolled');
-            } else {
-                siteHeader.classList.remove('scrolled');
-            }
+        // --- Populate Projects Teaser ---
+        const projectsGridTeaser = document.getElementById('projects-grid-teaser');
+        if (projectsGridTeaser && typeof projects !== 'undefined') {
+            const projectTeasers = projects.slice(0, 8).flatMap(p => p.image.slice(0,1).map(img => ({...p, imgSrc: img}))).slice(0, 8);
+             projectTeasers.forEach(p => {
+                const teaserCard = `
+                    <a href="project.html" class="block card-hover relative overflow-hidden h-48">
+                         <img src="${p.imgSrc}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
+                            <p class="text-white font-semibold">${p.name}</p>
+                        </div>
+                    </a>
+                `;
+                projectsGridTeaser.innerHTML += teaserCard;
+            });
         }
-    }, 50); // Debounce with a wait of 50ms
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Initial check on page load
-    handleScroll();
-
-
-    // --- Smooth Scroll for Navigation Links ---
-    smoothScrollLinks.forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
     });
-
-    // --- Add Hover Effects to Cards (using CSS for smoother transitions) ---
-    // Instead of JS, we can add CSS rules for .product-card:hover in styles/index.css
-    // The existing CSS in styles/index.css for .product-card:hover seems sufficient.
-    // If you want a different hover effect, define it in CSS.
-
   </script>
+
 </body>
 </html>

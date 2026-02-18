@@ -49,7 +49,7 @@ export const products = [
         subcategory:'u-shape',
         image:'images/kitchen/U-Shape3.jpg',
         name:'Contemporary Walnut & White U‑Shape',
-        description:'A modern twist: walnut wood cabinetry meets glossy white finishes, with under-cabinet lighting and smart storage making it clean yet cozy .'
+        description:'A modern twist: walnut wood cabinetry meets glossy white finishes, with under-cabinet lighting and smart storage making it clean yet cozy .',
     },
     {
         category:'kitchen',
@@ -63,14 +63,14 @@ export const products = [
         subcategory:'island',
         image:'images/kitchen/island1.jpg',
         name:'White Marble Island Workspace',
-        description:'A sleek, all‑white island with waterfall countertop, under-mount sink, and pendant lighting—ideal for prepping and entertaining in a contemporary setting.'
+        description:'A sleek, all‑white island with waterfall countertop, under-mount sink, and pendant lighting—ideal for prepping and entertaining in a contemporary setting.',
     },
     {
         category:'kitchen',
         subcategory:'island',
         image:'images/kitchen/island2.jpg',
         name:'Warm Woodgrain Gathering Bar',
-        description:'Natural wood-toned island featuring integrated bar seating and ambient pendant lights—perfect for casual meals and cozy gatherings.'
+        description:'Natural wood-toned island featuring integrated bar seating and ambient pendant lights—perfect for casual meals and cozy gatherings.',
     },
     {
         category:'kitchen',
@@ -275,7 +275,8 @@ export const products = [
     subcategory:'sectional',
     image:'images/sofa/sectional1.jpg',
     name:'Contemporary Modern Fabric Sectional',
-    description:'A sleek, European-inspired fabric sectional with stainless steel accents and a left/right chaise option. Ideal for large spaces looking for both style and comfort'
+    description:'A sleek, European-inspired fabric sectional with stainless steel accents and a left/right chaise option. Ideal for large spaces looking for both style and comfort',
+    featured: true
   },
   {
     category:'sofa',
@@ -390,7 +391,8 @@ export const products = [
     subcategory:'platform-bed',
     image:'images/bed/platform1.jpg',
     name:'Elegant Low‑Profile Upholstered Platform',
-    description:'A sleek, low-profile design with plush upholstery—comfort for both sitting and sleeping. Minimalist lines make it perfect for streamlined, contemporary interiors.'
+    description:'A sleek, low-profile design with plush upholstery—comfort for both sitting and sleeping. Minimalist lines make it perfect for streamlined, contemporary interiors.',
+    featured: true
   },
   {
     category:'bed',
@@ -668,7 +670,8 @@ export const products = [
     subcategory:'side',
     image:'images/cabinets/side1.jpg',
     name:'Scalloped Diamond-Pattern Sideboard',
-    description:'Warm walnut finish featuring diamond-carved door fronts that catch the light with graceful depth. Its elevated base gives a floating effect—perfect both as a storage cabinet and a showcase for art or decor.'
+    description:'Warm walnut finish featuring diamond-carved door fronts that catch the light with graceful depth. Its elevated base gives a floating effect—perfect both as a storage cabinet and a showcase for art or decor.',
+    featured: true
   },
   {
     category:'cabinet',
@@ -918,7 +921,8 @@ export const products = [
     subcategory:'dining-chair',
     image:'images/chairs/dining1.jpg',
     name:'Modern Upholstered Side Chair',
-    description:'Soft, padded seat and curved back with elegant metal legs—perfect for comfortable, everyday dining.'
+    description:'Soft, padded seat and curved back with elegant metal legs—perfect for comfortable, everyday dining.',
+    featured: true
 
   },
   {
