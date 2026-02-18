@@ -110,19 +110,78 @@
       </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section id="featured-products" class="py-16 bg-cream reveal">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Featured in Nishawe</h2>
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product cards will be inserted here by JS -->
-            </div>
-            <div class="text-center mt-12">
-                <a href="nishawe.html" class="btn-gold">Explore Full Collection</a>
-            </div>
-        </div>
-    </section>
+
+        
     
+    <!-- Featured In Nishawe Section -->
+    <section id="featured-nishawe" class="py-16 bg-white reveal">
+      <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Featured in Nishawe</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Kitchen Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="interior.html?category=kitchen" class="block">
+                      <img src="images/kitchen/island1.jpg" alt="Kitchen" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Kitchen</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Designs</span>
+                      </div>
+                  </a>
+              </div>
+              <!-- Wardrobe Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="interior.html?category=wardrobe" class="block">
+                      <img src="images/wardrobe/sliding1.jpg" alt="Wardrobe" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Wardrobe</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Designs</span>
+                      </div>
+                  </a>
+              </div>
+              <!-- Sofa Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="nishawe.html?category=sofa" class="block">
+                      <img src="images/sofa/sectional1.jpg" alt="Sofa" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Sofa</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Collection</span>
+                      </div>
+                  </a>
+              </div>
+              <!-- Bed Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="nishawe.html?category=bed" class="block">
+                      <img src="images/bed/platform1.jpg" alt="Bed" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Beds</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Collection</span>
+                      </div>
+                  </a>
+              </div>
+              <!-- Chair Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="nishawe.html?category=chair" class="block">
+                      <img src="images/chairs/dining1.jpg" alt="Chair" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Chairs</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Collection</span>
+                      </div>
+                  </a>
+              </div>
+              <!-- Cabinet Card -->
+              <div class="card-hover overflow-hidden">
+                  <a href="nishawe.html?category=cabinet" class="block">
+                      <img src="images/cabinets/side1.jpg" alt="Cabinet" class="w-full h-64 object-cover">
+                      <div class="p-6">
+                          <h3 class="text-xl font-semibold">Cabinets</h3>
+                          <span class="text-gold font-semibold mt-4 block">View Collection</span>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </section>
+
     <!-- Services Section -->
     <section id="services" class="py-16 bg-white reveal">
       <div class="container mx-auto px-4">
@@ -172,21 +231,24 @@
       </div>
     </section>
 
+
+
+
     <!-- Projects Teaser Section -->
     <section id="projects-teaser" class="py-16 bg-cream reveal">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Recent Work</h2>
-            <div id="projects-grid-teaser" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Project teasers will be dynamically inserted here -->
-            </div>
-            <div class="text-center mt-12">
-                <a href="project.html" class="btn-gold">View All Projects</a>
-            </div>
-        </div>
-    </section>
+      <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Our Recent Work</h2>
+          <div id="projects-grid-teaser" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Project teasers will be dynamically inserted here -->
+          </div>
+          <div class="text-center mt-12">
+              <a href="project.html" class="btn-gold">View All Projects</a>
+          </div>
+      </div>
+  </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-white reveal">
+    <section class="py-16 bg-cream reveal">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold">Ready to Create Your Dream Space?</h2>
         <p class="mt-4 text-lg text-charcoal-light">Let's discuss your project. We serve Delhi, Gurugram, Noida, and beyond.</p>
@@ -220,30 +282,8 @@
 
   <script src="js/projects-data.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/products.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // --- Populate Featured Products ---
-        const productGrid = document.getElementById('product-grid');
-        if (productGrid && typeof products !== 'undefined') {
-            const featuredProducts = products.slice(0, 6);
-            featuredProducts.forEach(p => {
-                const card = `
-                    <div class="card-hover overflow-hidden">
-                        <a href="nishawe.html?product=${p.name.replace(/\s+/g, '-')}" class="block">
-                            <img src="${p.image}" alt="${p.name}" class="w-full h-64 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold">${p.name}</h3>
-                                <p class="text-charcoal-light mt-2">${p.description.substring(0, 50)}...</p>
-                                <span class="text-gold font-semibold mt-4 block">View Details</span>
-                            </div>
-                        </a>
-                    </div>
-                `;
-                productGrid.innerHTML += card;
-            });
-        }
-
         // --- Populate Projects Teaser ---
         const projectsGridTeaser = document.getElementById('projects-grid-teaser');
         if (projectsGridTeaser && typeof projects !== 'undefined') {
