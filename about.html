@@ -7,6 +7,9 @@
   <meta name="description" content="Learn about Arcdezine, a leading architecture and interior design firm in Delhi NCR. Discover our team, our philosophy, and our commitment to creating luxury living spaces.">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
   <link rel="preload" as="image" href="images/logo/logo3.jpg">
+  <link rel="preload" as="image" href="background_images/pexels-tracy-le-blanc-67789-607812.jpg">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,6 +63,18 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
+    .hero-section {
+        position: relative;
+        height: 80vh;
+        color: white;
+    }
+    .hero-section .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     </style>
 </head>
 <body class="bg-cream text-charcoal">
@@ -111,19 +126,8 @@
 
   <main class="pt-14">
     <!-- Hero Section -->
-    <section class="relative h-[80vh] text-white">
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="absolute inset-0 w-full h-full object-cover"
-          poster="background_images/pexels-tracy-le-blanc-67789-607812.jpg"
-          id="hero-video"
-        >
-            <source src="https://videos.pexels.com/video-files/8310273/8310273-hd_1920_1080_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <section class="hero-section">
+        <img src="background_images/pexels-tracy-le-blanc-67789-607812.jpg" alt="About Arcdezine" class="hero-bg">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
             <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-24 w-auto mx-auto mb-6">
@@ -138,21 +142,21 @@
         <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="card-hover text-center">
-            <img src="images/team/member1.jpg" alt="Team Member 1" class="w-full h-80 object-cover">
+            <img src="images/team/member1.jpg" alt="Team Member 1" class="w-full h-80 object-cover" decoding="async">
             <div class="p-6">
               <h3 class="text-xl font-semibold">Nikshay sejwal</h3>
               <p class="text-gold">Founder & Principal Architect</p>
             </div>
           </div>
           <div class="card-hover text-center">
-            <img src="images/team/member2.jpg" alt="Team Member 2" class="w-full h-80 object-cover">
+            <img src="images/team/member2.jpg" alt="Team Member 2" class="w-full h-80 object-cover" decoding="async">
             <div class="p-6">
               <h3 class="text-xl font-semibold">shashank tyagi</h3>
               <p class="text-gold">Lead Interior Designer</p>
             </div>
           </div>
           <div class="card-hover text-center">
-            <img src="images/team/member3.jpg" alt="Team Member 3" class.="w-full h-80 object-cover">
+            <img src="images/team/member3.jpg" alt="Team Member 3" class="w-full h-80 object-cover" decoding="async">
             <div class="p-6">
               <h3 class="text-xl font-semibold">Abhishek yadav</h3>
               <p class="text-gold">Project Manager</p>
@@ -168,21 +172,21 @@
             <h2 class="text-4xl font-bold text-center mb-12">Our Expertise</h2>
             <div class="space-y-12">
                 <div class="flex flex-col md:flex-row items-center gap-8 card-hover p-8">
-                    <img src="images/Architecture_Planning.jpg" alt="Architecture" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <img src="images/Architecture_Planning.jpg" alt="Architecture" class="w-full md:w-1/2 h-80 object-cover rounded-lg" decoding="async">
                     <div>
                         <h3 class="text-3xl font-bold text-gold mb-4">Architecture & Planning</h3>
                         <p>We provide comprehensive architectural services from concept to completion. Our process includes site analysis, schematic design, design development, construction documentation, and project management. We focus on creating sustainable and contextually relevant designs that stand the test of time.</p>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8 card-hover p-8">
-                    <img src="images/Interior_Design.jpg" alt="Interior Design" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <img src="images/Interior_Design.jpg" alt="Interior Design" class="w-full md:w-1/2 h-80 object-cover rounded-lg" decoding="async">
                     <div>
                         <h3 class="text-3xl font-bold text-gold mb-4">Interior Design</h3>
                         <p>Our interior design services are tailored to create spaces that are both beautiful and functional. We handle everything from space planning and furniture selection to lighting design and material specification. Our goal is to create a cohesive and personalized environment that reflects your lifestyle.</p>
                     </div>
                 </div>
                  <div class="flex flex-col md:flex-row items-center gap-8 card-hover p-8">
-                    <img src="images/Custom_Furniture_Manufacturing.jpg" alt="Furniture" class="w-full md:w-1/2 h-80 object-cover rounded-lg">
+                    <img src="images/Custom_Furniture_Manufacturing.jpg" alt="Furniture" class="w-full md:w-1/2 h-80 object-cover rounded-lg" decoding="async">
                     <div>
                         <h3 class="text-3xl font-bold text-gold mb-4">Nishawe Furniture</h3>
                         <p>With our in-house furniture brand, Nishawe, we design and manufacture custom pieces that perfectly complement our architectural and interior projects. This integrated approach ensures seamless quality control and a truly unique aesthetic for your space, from bespoke sofas to handcrafted tables.</p>
@@ -244,7 +248,6 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <script src="js/main.js"></script>
 </body>

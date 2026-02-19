@@ -7,10 +7,11 @@
   <title>Nishawe Furniture Delhi NCR | Arcdezine Gurugram</title>
   
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  
   <link rel="preload" as="image" href="images/logo/logo3.jpg">
-  <link rel="preload" as="image" href="images/villa/villa1.webp" media="(max-width: 640px)">
-  <link rel="preload" as="image" href="images/hero-lg.webp" media="(min-width: 641px)">
+  <link rel="preload" as="image" href="background_images/home.jpg">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -73,6 +74,19 @@
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
+    .hero-section {
+        position: relative;
+        height: 80vh;
+        color: white;
+    }
+    .hero-section .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
   </style>
 </head>
 <body class="bg-cream text-charcoal">
@@ -123,19 +137,8 @@
 
   <main class="pt-14">
     <!-- Hero Section -->
-    <section class="relative h-[80vh] text-white">
-      <video
-        autoplay
-        loop
-        muted
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover"
-        poster="background_images/home.jpg"
-        id="hero-video"
-      >
-        <source src="https://videos.pexels.com/video-files/3854133/3854133-hd_1920_1080_25fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <section class="hero-section">
+      <img src="background_images/home.jpg" alt="Arcdezine Showroom" class="hero-bg">
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
         <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-24 w-auto mx-auto mb-6">
@@ -155,7 +158,7 @@
               <!-- Kitchen Card -->
               <div class="card-hover overflow-hidden">
                   <a href="interior.html?category=kitchen" class="block">
-                      <img src="images/kitchen/island1.jpg" alt="Kitchen" class="w-full h-64 object-cover">
+                      <img src="images/kitchen/island1.jpg" alt="Kitchen" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Kitchen</h3>
                           <span class="text-gold font-semibold mt-4 block">View Designs</span>
@@ -165,7 +168,7 @@
               <!-- Wardrobe Card -->
               <div class="card-hover overflow-hidden">
                   <a href="interior.html?category=wardrobe" class="block">
-                      <img src="images/wardrobe/sliding1.jpg" alt="Wardrobe" class="w-full h-64 object-cover">
+                      <img src="images/wardrobe/sliding1.jpg" alt="Wardrobe" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Wardrobe</h3>
                           <span class="text-gold font-semibold mt-4 block">View Designs</span>
@@ -175,7 +178,7 @@
               <!-- Sofa Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=sofa" class="block">
-                      <img src="images/sofa/sectional1.jpg" alt="Sofa" class="w-full h-64 object-cover">
+                      <img src="images/sofa/sectional1.jpg" alt="Sofa" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Sofa</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -185,7 +188,7 @@
               <!-- Bed Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=bed" class="block">
-                      <img src="images/bed/platform1.jpg" alt="Bed" class="w-full h-64 object-cover">
+                      <img src="images/bed/platform1.jpg" alt="Bed" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Beds</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -195,7 +198,7 @@
               <!-- Chair Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=chair" class="block">
-                      <img src="images/chairs/dining1.jpg" alt="Chair" class="w-full h-64 object-cover">
+                      <img src="images/chairs/dining1.jpg" alt="Chair" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Chairs</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -205,7 +208,7 @@
               <!-- Cabinet Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=cabinet" class="block">
-                      <img src="images/cabinets/side1.jpg" alt="Cabinet" class="w-full h-64 object-cover">
+                      <img src="images/cabinets/side1.jpg" alt="Cabinet" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Cabinets</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -319,7 +322,6 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
   <script src="js/projects-data.js"></script>
   <script src="js/main.js"></script>
@@ -332,7 +334,7 @@
              projectTeasers.forEach(p => {
                 const teaserCard = `
                     <a href="project.html" class="block card-hover relative overflow-hidden h-48">
-                         <img src="${p.imgSrc}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110">
+                         <img src="${p.imgSrc}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
                             <p class="text-white font-semibold">${p.name}</p>
                         </div>
