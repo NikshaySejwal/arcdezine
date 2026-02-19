@@ -9,7 +9,8 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size-adjust: 0.5;
   color: #2c2c2c;
   background-color: #f0f0f0;
   overflow-x: hidden;
@@ -106,6 +107,11 @@ body {
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
   z-index: 100;
+  visibility: hidden;
+}
+
+body.loaded .whatsapp-sticky {
+  visibility: visible;
 }
 
 .whatsapp-sticky:hover {
