@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="WSaNZM1tx1CZchBXnBc3MEP5qtxfwDIONSKtsnzQ0NY" />
   <title>Nishawe Furniture Delhi NCR | Arcdezine Gurugram</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="preload" as="image" href="images/logo/logo3.jpg">
+  <link rel="preload" as="image" href="background_images/home.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
   <link rel="preload" as="image" href="images/villa/villa1.webp" media="(max-width: 640px)">
   <link rel="preload" as="image" href="images/hero-lg.webp" media="(min-width: 641px)">
   <script type="application/ld+json">
@@ -57,6 +64,36 @@
       ] 
     }
   </script>
+  <style>
+    .card-hover {
+        background-color: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .card-hover:hover {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        transform: scale(1.02);
+    }
+    .card-hover img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    .hero-section {
+        position: relative;
+        height: 80vh;
+        color: white;
+    }
+    .hero-section .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+  </style>
 </head>
 <body class="bg-cream text-charcoal">
 
@@ -106,19 +143,9 @@
 
   <main class="pt-14">
     <!-- Hero Section -->
-    <section class="relative h-[80vh] text-white">
-      <video
-        autoplay
-        loop
-        muted
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover"
-        poster="background_images/home.jpg"
-        id="hero-video"
-      >
-        <source src="https://videos.pexels.com/video-files/3854133/3854133-hd_1920_1080_25fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <section class="hero-section">
+      <img src="background_images/home.jpg" alt="Arcdezine Showroom" class="hero-bg" width="1920" height="1080">
+
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
         <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-24 w-auto mx-auto mb-6">
@@ -138,7 +165,7 @@
               <!-- Kitchen Card -->
               <div class="card-hover overflow-hidden">
                   <a href="interior.html?category=kitchen" class="block">
-                      <img src="images/kitchen/island1.jpg" alt="Kitchen" class="w-full h-64 object-cover">
+                      <img src="images/kitchen/island1.jpg" alt="Kitchen" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Kitchen</h3>
                           <span class="text-gold font-semibold mt-4 block">View Designs</span>
@@ -148,7 +175,7 @@
               <!-- Wardrobe Card -->
               <div class="card-hover overflow-hidden">
                   <a href="interior.html?category=wardrobe" class="block">
-                      <img src="images/wardrobe/sliding1.jpg" alt="Wardrobe" class="w-full h-64 object-cover">
+                      <img src="images/wardrobe/sliding1.jpg" alt="Wardrobe" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Wardrobe</h3>
                           <span class="text-gold font-semibold mt-4 block">View Designs</span>
@@ -158,7 +185,7 @@
               <!-- Sofa Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=sofa" class="block">
-                      <img src="images/sofa/sectional1.jpg" alt="Sofa" class="w-full h-64 object-cover">
+                      <img src="images/sofa/sectional1.jpg" alt="Sofa" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Sofa</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -168,7 +195,7 @@
               <!-- Bed Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=bed" class="block">
-                      <img src="images/bed/platform1.jpg" alt="Bed" class="w-full h-64 object-cover">
+                      <img src="images/bed/platform1.jpg" alt="Bed" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Beds</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -178,7 +205,7 @@
               <!-- Chair Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=chair" class="block">
-                      <img src="images/chairs/dining1.jpg" alt="Chair" class="w-full h-64 object-cover">
+                      <img src="images/chairs/dining1.jpg" alt="Chair" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Chairs</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -188,7 +215,7 @@
               <!-- Cabinet Card -->
               <div class="card-hover overflow-hidden">
                   <a href="nishawe.html?category=cabinet" class="block">
-                      <img src="images/cabinets/side1.jpg" alt="Cabinet" class="w-full h-64 object-cover">
+                      <img src="images/cabinets/side1.jpg" alt="Cabinet" class="w-full h-64 object-cover" loading="lazy" decoding="async">
                       <div class="p-6">
                           <h3 class="text-xl font-semibold">Cabinets</h3>
                           <span class="text-gold font-semibold mt-4 block">View Collection</span>
@@ -229,7 +256,7 @@
     </section>
     
     <!-- Stats Section -->
-    <section class="py-16 bg-charcoal text-white reveal">
+    <section class="py-16 bg-charcoal text-gold reveal">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
@@ -278,7 +305,7 @@
   </main>
 
   <!-- WhatsApp Sticky Button -->
-  <a href="https://wa.me/919899624693" target="_blank" class="whatsapp-sticky">
+  <a href="https://wa.me/919899624693" target="_blank" class="whatsapp-sticky" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp text-3xl"></i>
   </a>
 
