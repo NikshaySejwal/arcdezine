@@ -150,8 +150,9 @@ body {
 }
 
 .counter {
-    min-width: 100px; /* Adjust as needed */
-    display: inline-block; /* Or block */
+  min-width: 4ch;
+  display: inline-block;
+  text-align: center;
 }
 
 @media (max-width: 640px) {

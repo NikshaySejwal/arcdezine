@@ -11,7 +11,8 @@
   <link rel="preload" as="image" href="background_images/home.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
@@ -322,25 +323,5 @@
 
   <script src="js/projects-data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // --- Populate Projects Teaser ---
-        const projectsGridTeaser = document.getElementById('projects-grid-teaser');
-        if (projectsGridTeaser && typeof projects !== 'undefined') {
-            const projectTeasers = projects.slice(0, 8).flatMap(p => p.image.slice(0,1).map(img => ({...p, imgSrc: img}))).slice(0, 8);
-             projectTeasers.forEach(p => {
-                const teaserCard = `
-                    <a href="project.html" class="block card-hover relative overflow-hidden h-48">
-                         <img src="${p.imgSrc}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" loading="lazy" decoding="async" width="400" height="225">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
-                            <p class="text-white font-semibold">${p.name}</p>
-                        </div>
-                    </a>
-                `;
-                projectsGridTeaser.innerHTML += teaserCard;
-            });
-        }
-    });
-  </script>
 </body>
 </html>
