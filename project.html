@@ -3,109 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arcdezine Projects Delhi NCR | Commercial, Villas, Showrooms</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Completed Projects | Arcdezine Delhi NCR Turnkey Proof</title>
+  <meta name="description" content="Explore verified architectural and interior case studies delivered by Arcdezine across Gurugram, Delhi, and Rewari with real handover photography." />
+  <link rel="canonical" href="https://arcdezine.in/project.html" />
+  <link rel="icon" href="images/logo/logo2.jpg" type="image/png" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-cream text-charcoal">
 
-  <!-- Header -->
+  <!-- Shared Header -->
   <header class="glass-nav fixed w-full z-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="flex justify-between items-center h-14">
-            <a href="index.html" class="flex-shrink-0">
-                <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-10 w-auto logo-img">
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="nishawe.html" class="nav-link">Nishawe (Furniture)</a>
-                <a href="interior.html" class="nav-link">Interior Catalogue</a>
-                <a href="project.html" class="nav-link">Projects</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="https://wa.me/919899624693" target="_blank" class="btn-gold flex items-center space-x-2">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="hamburgerMenu" class="text-charcoal focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m4 6h16"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <div id="mobileNavMenu" class="md:hidden hidden bg-white py-2">
-            <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
-            <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
-            <a href="interior.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Interior Catalogue</a>
-            <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
-            <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
-            <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
-            <a href="httpsa://wa.me/919899624693" target="_blank" class="block px-4 py-2 text-charcoal hover:bg-cream">WhatsApp</a>
+      <nav class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex-shrink-0" aria-label="Arcdezine Home">
+          <img src="images/logo/logo3.jpg" alt="Arcdezine Architecture & Interior Design" class="h-10 w-auto logo-img" width="160" height="40" />
+        </a>
+        <div class="hidden md:flex items-center space-x-7">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="project.html" class="nav-link text-gold font-semibold">Projects</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="nishawe.html" class="nav-link">Nishawe Furniture</a>
+          <a href="interior.html" class="nav-link">Interior Catalogue</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="tel:+919899624693" class="header-phone ml-2">
+            <i class="fas fa-phone-alt text-gold mr-2 text-sm"></i>+91 98996 24693
+          </a>
+          <a class="button button-primary ml-2" href="contact.html?source=header&cta=feasibility">
+            Book a feasibility consultation
+          </a>
         </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-charcoal p-2 focus:outline-none" aria-label="Toggle navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-3 px-4 space-y-2 border-t border-gray-100 shadow-lg">
+        <a href="index.html" class="block py-2 text-charcoal hover:text-gold font-medium">Home</a>
+        <a href="project.html" class="block py-2 text-gold font-semibold">Projects</a>
+        <a href="index.html#services" class="block py-2 text-charcoal hover:text-gold font-medium">Services</a>
+        <a href="nishawe.html" class="block py-2 text-charcoal hover:text-gold font-medium">Nishawe Furniture</a>
+        <a href="interior.html" class="block py-2 text-charcoal hover:text-gold font-medium">Interior Catalogue</a>
+        <a href="about.html" class="block py-2 text-charcoal hover:text-gold font-medium">About</a>
+        <a href="contact.html" class="block py-2 text-charcoal hover:text-gold font-medium">Contact</a>
+        <a href="tel:+919899624693" class="block py-2 text-gold font-semibold">+91 98996 24693</a>
+        <a href="contact.html?source=mobile-nav&cta=feasibility" class="block w-full text-center button button-primary mt-2">Book a feasibility consultation</a>
+      </div>
     </div>
   </header>
 
-  <main class="pt-14">
-    <!-- Hero Section -->
-    <section class="relative h-[80vh] text-white">
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="absolute inset-0 w-full h-full object-cover"
-          poster="background_images/project.jpg"
-          id="hero-video"
-        >
-            <source src="https://videos.pexels.com/video-files/4496289/4496289-hd_1920_1080_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight">Our Projects</h1>
-            <p class="mt-4 text-xl md:text-2xl">Crafting Spaces, Building Dreams.</p>
-        </div>
-    </section>
+  <main class="pt-24 pb-20">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="eyebrow">Real Handover Proof</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-charcoal mb-4">Completed NCR Projects</h1>
+        <p class="text-gray-600 text-lg">
+          Explore actual commercial destinations, luxury jewellery showrooms, and villas designed and delivered through our single accountable team.
+        </p>
+      </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-cream">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-center flex-wrap gap-4 mb-12">
-                <button class="filter-btn btn-gold active" data-filter="all">All</button>
-                <button class="filter-btn btn-gold" data-filter="commercial">Commercial</button>
-                <button class="filter-btn btn-gold" data-filter="villa">Villas</button>
-                <button class="filter-btn btn-gold" data-filter="showroom">Showrooms</button>
+      <!-- Category Filter Tabs -->
+      <div class="flex justify-center flex-wrap gap-3 mb-12">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="showroom">Showrooms</button>
+        <button class="filter-btn" data-filter="villa">Villas</button>
+      </div>
+
+      <!-- Projects Grid Container -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1: Laxmi Shopping Mall -->
+        <article class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-gray-200 flex flex-col" data-type="commercial">
+          <a href="projects/laxmi-shopping-mall-rewari/" class="block h-64 overflow-hidden bg-charcoal relative">
+            <img src="images/projects/shoppingmall/1.jpg" alt="Approved photograph of completed Laxmi Shopping Mall Rewari" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" width="600" height="400" />
+            <span class="absolute top-4 left-4 bg-charcoal text-white text-xs px-3 py-1 rounded-full font-medium">Commercial</span>
+          </a>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-xs mb-1">Commercial · Rewari</p>
+              <h2 class="text-2xl font-bold text-charcoal mb-2">Laxmi Shopping Mall</h2>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                Architecture, interior design, and turnkey execution for customer-facing retail spaces with natural lighting integration.
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 mb-4 border-t border-gray-100 pt-3">
+                <p><strong>Scope:</strong> Architecture + Interiors + Execution</p>
+                <p><strong>Area:</strong> Available on request</p>
+                <p><strong>Timeline:</strong> Phased handover</p>
+              </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 js-projects-grid">
-                <!-- Projects will be dynamically inserted here -->
+            <a href="projects/laxmi-shopping-mall-rewari/" class="text-gold font-bold text-sm inline-flex items-center hover:underline">
+              View case study <span class="ml-2">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Raghuram Jeweller's -->
+        <article class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-gray-200 flex flex-col" data-type="showroom">
+          <a href="projects/raghuram-jewellers-gurgaon/" class="block h-64 overflow-hidden bg-charcoal relative">
+            <img src="images/projects/Raghuramjeweller/VIEW1.jpg" alt="Approved photograph of Raghuram Jewellers Showroom Gurgaon" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" width="600" height="400" />
+            <span class="absolute top-4 left-4 bg-charcoal text-white text-xs px-3 py-1 rounded-full font-medium">Showroom</span>
+          </a>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-xs mb-1">Showroom · Gurugram</p>
+              <h2 class="text-2xl font-bold text-charcoal mb-2">Raghuram Jeweller's</h2>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                High-luxury jewellery retail showroom with custom display joinery, secure consultation cabins, and 95+ CRI display lighting.
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 mb-4 border-t border-gray-100 pt-3">
+                <p><strong>Scope:</strong> Interior Architecture + Joinery + Lighting</p>
+                <p><strong>Area:</strong> Available on request</p>
+                <p><strong>Timeline:</strong> Milestone schedule</p>
+              </div>
             </div>
+            <a href="projects/raghuram-jewellers-gurgaon/" class="text-gold font-bold text-sm inline-flex items-center hover:underline">
+              View case study <span class="ml-2">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Modern Luxury Villa -->
+        <article class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-gray-200 flex flex-col" data-type="villa">
+          <a href="projects/modern-luxury-villa-nirvana-country/" class="block h-64 overflow-hidden bg-charcoal relative">
+            <img src="images/projects/manoj_bungalow/1.jpg" alt="Approved photograph of Modern Luxury Villa Nirvana Country" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" width="600" height="400" />
+            <span class="absolute top-4 left-4 bg-charcoal text-white text-xs px-3 py-1 rounded-full font-medium">Villa</span>
+          </a>
+          <div class="p-6 flex-grow flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-xs mb-1">Villa · Nirvana Country</p>
+              <h2 class="text-2xl font-bold text-charcoal mb-2">Modern Luxury Villa</h2>
+              <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                End-to-end luxury residence transformation with bespoke spatial partitions, custom joinery, and tailored Nishawe furniture.
+              </p>
+              <div class="text-xs text-gray-500 space-y-1 mb-4 border-t border-gray-100 pt-3">
+                <p><strong>Scope:</strong> Architecture + Interiors + Nishawe Furniture</p>
+                <p><strong>Area:</strong> Available on request</p>
+                <p><strong>Timeline:</strong> Milestone-verified</p>
+              </div>
+            </div>
+            <a href="projects/modern-luxury-villa-nirvana-country/" class="text-gold font-bold text-sm inline-flex items-center hover:underline">
+              View case study <span class="ml-2">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Honest Proof Note Section (Required by Section 7.3) -->
+      <div class="proof-note mt-14">
+        <strong>Transparent Portfolio Notice:</strong> We are currently documenting and adding approved project case studies. To inspect additional work samples or schedule an active site walkthrough in Gurugram, request a private portfolio during your consultation.
+      </div>
+
+      <!-- Feasibility Consultation Callout -->
+      <section class="mt-16 bg-white p-8 md:p-12 rounded-2xl border border-gray-200 text-center shadow-sm">
+        <h3 class="text-2xl font-bold text-charcoal mb-3">Discuss your project scope with our team</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6 text-sm">
+          Whether you are building a villa in Gurugram, renovating an apartment in South Delhi, or planning a commercial showroom, receive a written feasibility assessment.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html?source=projects-cta&cta=feasibility" class="button button-primary">
+            Book a feasibility consultation
+          </a>
+          <a href="https://wa.me/919899624693" class="whatsapp-cta button button-secondary" data-source="projects_page">
+            <i class="fab fa-whatsapp mr-2 text-green-600"></i> WhatsApp Project Lead
+          </a>
         </div>
-    </section>
+      </section>
+
+    </div>
   </main>
 
-  <!-- WhatsApp Sticky Button -->
-  <a href="https://wa.me/919899624693" target="_blank" class="whatsapp-sticky">
-    <i class="fab fa-whatsapp text-3xl"></i>
+  <!-- Sticky Mobile WhatsApp -->
+  <a href="https://wa.me/919899624693" class="whatsapp-sticky" aria-label="Chat on WhatsApp" data-source="projects_sticky">
+    <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
-  <!-- Footer -->
-  <footer class="bg-charcoal text-cream py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p class="mb-2">&copy; <span id="currentYear"></span> Arcdezine. All rights reserved.</p>
-      <p class="text-sm">
-        <a href="about.html" class="hover:text-gold">About</a> | 
-        <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
-        <a href="interior.html" class="hover:text-gold">Interior Catalogue</a> |
-        <a href="project.html" class="hover:text-gold">Projects</a> |
-        <a href="contact.html" class="hover:text-gold">Contact</a>
-      </p>
+  <!-- Shared Footer -->
+  <footer class="bg-charcoal text-cream py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-left">
+        <div>
+          <h3 class="text-xl font-bold text-gold mb-3">Arcdezine</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">
+            Turnkey architecture, interior execution, and custom Nishawe furniture across Delhi NCR with single-point accountability.
+          </p>
+          <p class="text-xs text-gray-500">Sector 48, Gurugram, Haryana</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Navigation</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-gold">Home</a></li>
+            <li><a href="project.html" class="hover:text-gold">Completed Projects</a></li>
+            <li><a href="index.html#services" class="hover:text-gold">Turnkey Services</a></li>
+            <li><a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a></li>
+            <li><a href="interior.html" class="hover:text-gold">Interior Catalogue</a></li>
+            <li><a href="about.html" class="hover:text-gold">About Team</a></li>
+            <li><a href="contact.html" class="hover:text-gold">Contact & Feasibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Service Areas</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li>Gurugram (Golf Course Rd, Sohna Rd, DLF)</li>
+            <li>South & Central Delhi</li>
+            <li>Noida & Greater Noida</li>
+            <li>Faridabad & NCR Outskirts</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Contact Desk</h4>
+          <p class="text-sm text-gray-400 mb-2">
+            <i class="fas fa-phone-alt text-gold mr-2"></i><a href="tel:+919899624693" class="hover:text-gold">+91 98996 24693</a>
+          </p>
+          <p class="text-sm text-gray-400 mb-3">
+            <i class="fas fa-envelope text-gold mr-2"></i>arcdezine27@gmail.com
+          </p>
+          <p class="text-sm text-gray-400">
+            <i class="fab fa-instagram text-gold mr-2"></i><a href="https://www.instagram.com/arcdezineofficial" target="_blank" rel="noopener" class="hover:text-gold">@arcdezineofficial</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+        <p>&copy; <span id="currentYear">2026</span> Arcdezine Turnkey Proof-to-Handover. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold underline">Privacy Policy</a></p>
+      </div>
     </div>
   </footer>
 
-<script type="module" src="scripts/projectpage.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/site.js"></script>
 
+  <!-- Filter tabs interactivity -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+          projectCards.forEach(card => {
+            if (filter === "all" || card.dataset.type === filter) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>

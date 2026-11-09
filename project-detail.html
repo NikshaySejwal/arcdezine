@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Case Study | Arcdezine Delhi NCR</title>
+  <meta name="description" content="Detailed case study of completed Arcdezine turnkey architecture and interior projects in Delhi NCR." />
+  <link rel="canonical" href="https://arcdezine.in/project-detail.html" />
+  <link rel="icon" href="images/logo/logo2.jpg" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-cream text-charcoal">
+
+  <!-- Header -->
+  <header class="glass-nav fixed w-full z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex-shrink-0" aria-label="Arcdezine Home">
+          <img src="images/logo/logo3.jpg" alt="Arcdezine Architecture & Design" class="h-10 w-auto logo-img" width="160" height="40" />
+        </a>
+        <div class="hidden md:flex items-center space-x-7">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="project.html" class="nav-link text-gold font-semibold">Projects</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="nishawe.html" class="nav-link">Nishawe Furniture</a>
+          <a href="interior.html" class="nav-link">Interior Catalogue</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="tel:+919899624693" class="header-phone ml-2">
+            <i class="fas fa-phone-alt text-gold mr-2 text-sm"></i>+91 98996 24693
+          </a>
+          <a href="contact.html?source=header&cta=feasibility" class="button button-primary ml-2">
+            Book a feasibility consultation
+          </a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-charcoal p-2 focus:outline-none" aria-label="Toggle navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-3 px-4 space-y-2 border-t border-gray-100 shadow-lg">
+        <a href="index.html" class="block py-2 text-charcoal hover:text-gold font-medium">Home</a>
+        <a href="project.html" class="block py-2 text-gold font-semibold">Projects</a>
+        <a href="index.html#services" class="block py-2 text-charcoal hover:text-gold font-medium">Services</a>
+        <a href="nishawe.html" class="block py-2 text-charcoal hover:text-gold font-medium">Nishawe Furniture</a>
+        <a href="interior.html" class="block py-2 text-charcoal hover:text-gold font-medium">Interior Catalogue</a>
+        <a href="about.html" class="block py-2 text-charcoal hover:text-gold font-medium">About</a>
+        <a href="contact.html" class="block py-2 text-charcoal hover:text-gold font-medium">Contact</a>
+        <a href="tel:+919899624693" class="block py-2 text-gold font-semibold">+91 98996 24693</a>
+        <a href="contact.html?source=mobile-nav&cta=feasibility" class="block w-full text-center button button-primary mt-2">Book a feasibility consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20 pb-20" id="project-container">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <!-- Back Navigation -->
+      <div class="py-4">
+        <a href="project.html" class="text-sm font-semibold text-gray-600 hover:text-gold inline-flex items-center">
+          <i class="fas fa-arrow-left mr-2"></i> Back to all completed projects
+        </a>
+      </div>
+
+      <!-- Loading State -->
+      <div id="project-loading" class="text-center py-16">
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gold"></div>
+        <p class="mt-4 text-gray-600">Loading verified case study...</p>
+      </div>
+
+      <!-- Main Case Study Content Container (Injected by JS) -->
+      <div id="project-content" class="hidden">
+        <header class="case-study-header text-left py-6">
+          <p id="project-eyebrow" class="eyebrow"></p>
+          <h1 id="project-title" class="text-3xl md:text-5xl font-bold text-charcoal mb-4"></h1>
+          <p id="project-summary" class="text-lg text-gray-700 max-w-3xl leading-relaxed"></p>
+        </header>
+
+        <!-- Hero Photograph -->
+        <div class="rounded-2xl overflow-hidden shadow-lg my-6 bg-charcoal">
+          <img id="project-hero" src="" alt="Project Hero Photograph" class="w-full h-[55vh] object-cover" width="1200" height="800" />
+        </div>
+
+        <!-- Verified Facts Strip -->
+        <section class="case-study-facts" aria-label="Project Quick Facts">
+          <div>
+            <span>Location</span>
+            <strong id="fact-location">Available on request</strong>
+          </div>
+          <div>
+            <span>Typology</span>
+            <strong id="fact-type">Commercial</strong>
+          </div>
+          <div>
+            <span>Approx. Area</span>
+            <strong id="fact-area">Available on request</strong>
+          </div>
+          <div>
+            <span>Timeline</span>
+            <strong id="fact-timeline">Available on request</strong>
+          </div>
+        </section>
+
+        <!-- Brief & Solution Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+          <article class="bg-white p-8 rounded-xl border border-gray-200">
+            <h2 class="text-xl font-bold mb-3 flex items-center text-charcoal">
+              <i class="fas fa-clipboard-list text-gold mr-3"></i> The Client Brief
+            </h2>
+            <p id="project-brief" class="text-gray-600 leading-relaxed text-sm"></p>
+          </article>
+          <article class="bg-white p-8 rounded-xl border border-gray-200">
+            <h2 class="text-xl font-bold mb-3 flex items-center text-charcoal">
+              <i class="fas fa-drafting-compass text-gold mr-3"></i> The Design Response
+            </h2>
+            <p id="project-response" class="text-gray-600 leading-relaxed text-sm"></p>
+          </article>
+        </div>
+
+        <!-- Scope Delivered & Materials Specification -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+          <article class="bg-white p-8 rounded-xl border border-gray-200">
+            <h2 class="text-xl font-bold mb-4 flex items-center text-charcoal">
+              <i class="fas fa-check-circle text-gold mr-3"></i> Scope Delivered
+            </h2>
+            <ul id="project-scope-list" class="space-y-2 text-sm text-gray-700"></ul>
+          </article>
+          <article class="bg-white p-8 rounded-xl border border-gray-200">
+            <h2 class="text-xl font-bold mb-4 flex items-center text-charcoal">
+              <i class="fas fa-layer-group text-gold mr-3"></i> Material & Furniture Decisions
+            </h2>
+            <p id="project-materials" class="text-gray-600 leading-relaxed text-sm"></p>
+          </article>
+        </div>
+
+        <!-- Project Photo Gallery -->
+        <section class="my-14">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-charcoal">Site Photography & Execution Records</h2>
+            <span class="text-xs text-gray-500 uppercase tracking-wider">Click photo to inspect</span>
+          </div>
+          <div id="project-gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- Transparent Handover Note -->
+        <div class="proof-note text-center">
+          <strong>Verified Handover Standard:</strong> All photographs depict the actual space engineered and executed by Arcdezine. Detailed bills of quantities, layout approvals, and manufacturer warranties are shared transparently during feasibility consultations.
+        </div>
+
+        <!-- Call to Action Card -->
+        <section class="bg-charcoal text-white p-8 md:p-12 rounded-2xl text-center my-12">
+          <p class="eyebrow text-gold">Plan Your Space</p>
+          <h2 class="text-2xl md:text-4xl font-bold mb-4">Planning a similar project in Delhi NCR?</h2>
+          <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-base">
+            Work with one accountable team for architectural layouts, written material specifications, timeline control, and custom furniture.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a id="cta-consultation" href="contact.html?cta=feasibility" class="button button-primary">
+              Book a feasibility consultation
+            </a>
+            <a id="cta-whatsapp" href="https://wa.me/919899624693" class="whatsapp-cta button button-secondary bg-white text-charcoal hover:bg-gray-100" data-source="project_detail">
+              <i class="fab fa-whatsapp mr-2 text-lg text-green-600"></i> Discuss on WhatsApp
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="project-lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-[200] hidden items-center justify-center p-4">
+    <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+      <button id="close-lightbox" class="absolute -top-10 right-0 text-white text-3xl hover:text-gold">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged project photograph" class="max-w-full max-h-[80vh] object-contain rounded-lg" />
+      <p id="lightbox-caption" class="text-white text-sm mt-3 text-center"></p>
+    </div>
+  </div>
+
+  <!-- Sticky Mobile WhatsApp -->
+  <a href="https://wa.me/919899624693" class="whatsapp-sticky" aria-label="Chat on WhatsApp" data-source="project_detail_sticky">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Shared Footer -->
+  <footer class="bg-charcoal text-cream py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-left">
+        <div>
+          <h3 class="text-xl font-bold text-gold mb-3">Arcdezine</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">
+            Turnkey architecture, interior execution, and custom Nishawe furniture across Delhi NCR with single-point accountability.
+          </p>
+          <p class="text-xs text-gray-500">Sector 48, Gurugram, Haryana</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Navigation</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-gold">Home</a></li>
+            <li><a href="project.html" class="hover:text-gold">Completed Projects</a></li>
+            <li><a href="index.html#services" class="hover:text-gold">Turnkey Services</a></li>
+            <li><a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a></li>
+            <li><a href="interior.html" class="hover:text-gold">Interior Catalogue</a></li>
+            <li><a href="about.html" class="hover:text-gold">About Team</a></li>
+            <li><a href="contact.html" class="hover:text-gold">Contact & Feasibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Service Areas</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li>Gurugram (Golf Course Rd, Sohna Rd, DLF)</li>
+            <li>South & Central Delhi</li>
+            <li>Noida & Greater Noida</li>
+            <li>Faridabad & NCR Outskirts</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Contact Desk</h4>
+          <p class="text-sm text-gray-400 mb-2">
+            <i class="fas fa-phone-alt text-gold mr-2"></i><a href="tel:+919899624693" class="hover:text-gold">+91 98996 24693</a>
+          </p>
+          <p class="text-sm text-gray-400 mb-3">
+            <i class="fas fa-envelope text-gold mr-2"></i>arcdezine27@gmail.com
+          </p>
+          <p class="text-sm text-gray-400">
+            <i class="fab fa-instagram text-gold mr-2"></i><a href="https://www.instagram.com/arcdezineofficial" target="_blank" rel="noopener" class="hover:text-gold">@arcdezineofficial</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+        <p>&copy; <span id="currentYear">2026</span> Arcdezine Turnkey Proof-to-Handover. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold underline">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/site.js"></script>
+
+  <!-- Project Detail Dynamic Loader -->
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const params = new URLSearchParams(window.location.search);
+      const requestedSlug = params.get("project") || "laxmi-shopping-mall-rewari";
+
+      const loadingEl = document.getElementById("project-loading");
+      const contentEl = document.getElementById("project-content");
+
+      try {
+        const res = await fetch("assets/data/projects.json");
+        const projects = await res.json();
+        const project = projects.find(p => p.slug === requestedSlug) || projects[0];
+
+        if (!project) throw new Error("Project not found");
+
+        // Update document title & metadata
+        document.title = `${project.title} Case Study | Arcdezine Gurugram`;
+        
+        document.getElementById("project-eyebrow").textContent = `${project.type} · ${project.location} · Handover ${project.year || "Completed"}`;
+        document.getElementById("project-title").textContent = project.title;
+        document.getElementById("project-summary").textContent = project.summary;
+        
+        const heroImg = document.getElementById("project-hero");
+        heroImg.src = project.heroImage;
+        heroImg.alt = `Completed photography of ${project.title}`;
+
+        document.getElementById("fact-location").textContent = project.location || "Available on request";
+        document.getElementById("fact-type").textContent = project.type || "Available on request";
+        document.getElementById("fact-area").textContent = project.area || "Available on request";
+        document.getElementById("fact-timeline").textContent = project.timeline || "Available on request";
+
+        document.getElementById("project-brief").textContent = project.clientBrief || "Client brief documented during feasibility stage.";
+        document.getElementById("project-response").textContent = project.designResponse || "Custom architectural layout and execution response designed by Arcdezine.";
+        document.getElementById("project-materials").textContent = project.materials || "Material specifications verified in contract schedule.";
+
+        // Scope list
+        const scopeList = document.getElementById("project-scope-list");
+        scopeList.innerHTML = "";
+        (project.scope || []).forEach(item => {
+          const li = document.createElement("li");
+          li.className = "flex items-center";
+          li.innerHTML = `<i class="fas fa-check text-gold mr-2 text-xs"></i><span>${item}</span>`;
+          scopeList.appendChild(li);
+        });
+
+        // Gallery
+        const gallery = document.getElementById("project-gallery");
+        gallery.innerHTML = "";
+        const images = project.images && project.images.length > 0 ? project.images : [project.heroImage];
+        
+        images.forEach((imgSrc, idx) => {
+          const item = document.createElement("div");
+          item.className = "rounded-xl overflow-hidden cursor-pointer shadow-sm hover:opacity-95 transition bg-black h-48 sm:h-56";
+          item.innerHTML = `<img src="${imgSrc}" alt="${project.title} photo ${idx + 1}" class="w-full h-full object-cover" loading="lazy" />`;
+          item.addEventListener("click", () => openLightbox(imgSrc, `${project.title} — Photo ${idx + 1}`));
+          gallery.appendChild(item);
+        });
+
+        // Update CTAs
+        const ctaBtn = document.getElementById("cta-consultation");
+        ctaBtn.href = `contact.html?source=case-study-${project.slug}&cta=feasibility&type=${encodeURIComponent(project.type)}`;
+
+        const waBtn = document.getElementById("cta-whatsapp");
+        if (typeof buildWhatsAppUrl === "function") {
+          waBtn.href = buildWhatsAppUrl({ project: project.title, source: `case-study-${project.slug}` });
+        }
+
+        // Show content
+        loadingEl.classList.add("hidden");
+        contentEl.classList.remove("hidden");
+
+        // Track project view event
+        if (typeof trackEvent === "function") {
+          trackEvent("project_view", {
+            project_slug: project.slug,
+            project_type: project.type,
+            source: params.get("source") || "direct"
+          });
+        }
+
+      } catch (err) {
+        console.error("Error loading project:", err);
+        loadingEl.innerHTML = `<p class="text-red-600">Could not load case study details. <a href="project.html" class="underline text-gold">Return to projects list</a></p>`;
+      }
+    });
+
+    // Lightbox modal logic
+    const lightbox = document.getElementById("project-lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.getElementById("close-lightbox");
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption || "";
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+    }
+
+    if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+    if (lightbox) {
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+    }
+  </script>
+</body>
+</html>
+

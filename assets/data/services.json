@@ -1,0 +1,44 @@
+[
+  {
+    "id": "turnkey-design-build",
+    "title": "Turnkey Design-Build",
+    "summary": "Single-point accountability from preliminary feasibility study, drawings, BOQ, material procurement to final snag-free handover.",
+    "deliverables": [
+      "Dedicated lead architect & project manager",
+      "Itemized bill of quantities (BOQ) with fixed material assumptions",
+      "Weekly site progression milestones with photo logs",
+      "Handover defect inspection and 12-month workmanship support"
+    ]
+  },
+  {
+    "id": "architecture-planning",
+    "title": "Architecture & Space Planning",
+    "summary": "Functional, structurally sound architectural layouts tailored to Delhi NCR municipal norms and site constraints.",
+    "deliverables": [
+      "2D layout plans, elevations, and structural drawings",
+      "Sun-path, ventilation, and MEP coordination",
+      "Material schedules and vendor specifications"
+    ]
+  },
+  {
+    "id": "interior-execution",
+    "title": "Interior Architecture & Fit-Out",
+    "summary": "High-craft interior solutions including false ceilings, electrical layouts, civil alterations, and bespoke cabinetry.",
+    "deliverables": [
+      "Detailed 3D visualizations and joinery details",
+      "Lighting design (3000K-4000K mood and task illumination)",
+      "Surface finish coordination (veneer, stone, micro-cement, tile)"
+    ]
+  },
+  {
+    "id": "nishawe-custom-furniture",
+    "title": "Nishawe Bespoke Furniture",
+    "summary": "Custom furniture manufactured in our dedicated facility, built to exact project room scales and fabric selections.",
+    "deliverables": [
+      "Hardwood frame sofas, sectionals, and ergonomic accent chairs",
+      "Custom storage beds, hydraulic lift mechanisms, and upholstered headboards",
+      "Modular TV consoles, dining tables, sideboards, and temple units"
+    ]
+  }
+]
+

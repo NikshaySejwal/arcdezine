@@ -1,0 +1,302 @@
+/**
+ * Arcdezine Components Stylesheet
+ * Proof-led UI elements, case study modules, forms, and responsive utilities
+ */
+
+/* ==========================================================================
+   Proof Strip (Directly beneath Hero)
+   ========================================================================== */
+.proof-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background-color: #111827; /* Charcoal */
+  color: #FCF9F2; /* Cream */
+  padding: 2.25rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  margin-top: -2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.proof-strip > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 2px solid rgba(212, 165, 116, 0.4);
+  padding-left: 1rem;
+}
+
+.proof-strip strong {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #D4A574; /* Gold */
+  line-height: 1;
+}
+
+.proof-strip span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #E5E7EB;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   Problem Section
+   ========================================================================== */
+.problem-section {
+  padding: 5rem 1rem;
+  background-color: #FCF9F2;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.problem-grid article {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-left: 4px solid #D4A574;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.problem-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+.problem-grid h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.problem-grid p {
+  color: #4B5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Process Section
+   ========================================================================== */
+.process-section {
+  padding: 5rem 1rem;
+  background-color: #FFFFFF;
+}
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2.5rem;
+}
+
+.process-list li {
+  background: #FCF9F2;
+  border-radius: 0.75rem;
+  padding: 2.25rem;
+  border: 1px solid #E5E7EB;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.process-list li strong {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #D4A574;
+  margin-bottom: 0.75rem;
+}
+
+.process-list li span {
+  display: block;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Case Study Facts & Detail Cards
+   ========================================================================== */
+.case-study-header {
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+}
+
+.case-study-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background-color: #FCF9F2;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.case-study-facts div span {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+  margin-bottom: 0.35rem;
+}
+
+.case-study-facts div strong {
+  font-size: 1.1rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Proof Note (Transparent Portfolio Status)
+   ========================================================================== */
+.proof-note {
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1E40AF;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 2.5rem auto;
+  max-width: 48rem;
+}
+
+/* ==========================================================================
+   Buttons & CTAs
+   ========================================================================== */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.button:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #D4A574;
+  outline-offset: 2px;
+}
+
+.button-primary {
+  background-color: #D4A574;
+  color: #FFFFFF !important;
+  border: 2px solid #D4A574;
+}
+
+.button-primary:hover {
+  background-color: #B58455;
+  border-color: #B58455;
+  box-shadow: 0 4px 14px rgba(212, 165, 116, 0.45);
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: #111827 !important;
+  border: 2px solid #D4A574;
+}
+
+.button-secondary:hover {
+  background-color: #D4A574;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-phone:hover {
+  color: #D4A574;
+}
+
+/* Eyebrow Subheaders */
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #D4A574;
+  margin-bottom: 0.75rem;
+}
+
+.microcopy {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-top: 0.75rem;
+}
+
+/* ==========================================================================
+   Form Enhancements
+   ========================================================================== */
+.form-note {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+.form-error {
+  background-color: #FEF2F2;
+  border: 1px solid #F87171;
+  color: #991B1B;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+.consent input[type="checkbox"] {
+  margin-top: 0.2rem;
+  accent-color: #D4A574;
+}
+
+/* Responsive adjustment */
+@media (max-width: 640px) {
+  .proof-strip {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+}
+

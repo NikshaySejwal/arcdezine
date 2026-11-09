@@ -3,181 +3,245 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nishawe Furniture Collection | Arcdezine Delhi NCR</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo/logo2.jpg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Nishawe Custom Furniture Collection | In-House Brand by Arcdezine</title>
+  <meta name="description" content="Nishawe is Arcdezine's bespoke custom furniture line crafted in Delhi NCR. Bespoke hardwood sofas, sectionals, upholstered beds, and custom cabinetry." />
+  <link rel="canonical" href="https://arcdezine.in/nishawe.html" />
+  <link rel="icon" href="images/logo/logo2.jpg" type="image/png" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
   <style>
     .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
     }
     .product-card {
-        background-color: white;
-        border-radius: 1.5rem; 
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-        overflow: hidden;
+      background-color: white;
+      border-radius: 1.25rem;
+      border: 1px solid #E5E7EB;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      overflow: hidden;
     }
     .product-card:hover {
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        transform: scale(1.02);
-    }
-    .product-image img {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-    }
-    .product-content {
-        padding: 1.5rem;
-    }
-    .product-content h3 {
-        font-size: 1.5rem; 
-        font-weight: 600;
-    }
-    .product-content p {
-        margin-top: 0.5rem;
-        color: var(--charcoal-light);
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
     }
     .filter-btn {
-        padding: 0.75rem 1.5rem;
-        border-radius: 9999px; 
-        font-weight: 500;
-        transition: all 0.3s ease;
-        background-color: white;
-        border: 1px solid var(--gold);
-        color: var(--gold);
+      padding: 0.65rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.25s ease;
+      background-color: white;
+      border: 1px solid #D4A574;
+      color: #D4A574;
+      cursor: pointer;
     }
-    .filter-btn.active {
-        background-color: var(--gold);
-        color: white;
-    }
-    .filter-btn:hover {
-        background-color: var(--gold);
-        color: white;
+    .filter-btn.active, .filter-btn:hover {
+      background-color: #D4A574;
+      color: white;
     }
   </style>
 </head>
 <body class="bg-cream text-charcoal">
 
-  <!-- Header -->
+  <!-- Shared Header -->
   <header class="glass-nav fixed w-full z-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex justify-between items-center h-14">
-        <a href="index.html" class="flex-shrink-0">
-          <img src="images/logo/logo3.jpg" alt="Arcdezine Logo" class="h-10 w-auto logo-img">
+      <nav class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex-shrink-0" aria-label="Arcdezine Home">
+          <img src="images/logo/logo3.jpg" alt="Arcdezine Architecture & Design" class="h-10 w-auto logo-img" width="160" height="40" />
         </a>
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden md:flex items-center space-x-7">
           <a href="index.html" class="nav-link">Home</a>
-          <a href="nishawe.html" class="nav-link">Nishawe (Furniture)</a>
-          <a href="interior.html" class="nav-link">Interior Catalogue</a>
           <a href="project.html" class="nav-link">Projects</a>
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="nishawe.html" class="nav-link text-gold font-semibold">Nishawe Furniture</a>
+          <a href="interior.html" class="nav-link">Interior Catalogue</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="contact.html" class="nav-link">Contact</a>
-          <a href="https://wa.me/919899624693" target="_blank" class="btn-gold flex items-center space-x-2">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp</span>
+          <a href="tel:+919899624693" class="header-phone ml-2">
+            <i class="fas fa-phone-alt text-gold mr-2 text-sm"></i>+91 98996 24693
+          </a>
+          <a class="button button-primary ml-2" href="contact.html?source=header&cta=feasibility">
+            Book a feasibility consultation
           </a>
         </div>
         <div class="md:hidden flex items-center">
-          <button id="hamburgerMenu" class="text-charcoal focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m4 6h16"></path></svg>
+          <button id="menu-btn" class="text-charcoal p-2 focus:outline-none" aria-label="Toggle navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </button>
         </div>
       </nav>
-      <div id="mobileNavMenu" class="md:hidden hidden bg-white py-2">
-        <a href="index.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Home</a>
-        <a href="nishawe.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Nishawe (Furniture)</a>
-        <a href="interior.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Interior Catalogue</a>
-        <a href="project.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Projects</a>
-        <a href="about.html" class="block px-4 py-2 text-charcoal hover:bg-cream">About</a>
-        <a href="contact.html" class="block px-4 py-2 text-charcoal hover:bg-cream">Contact</a>
-        <a href="https://wa.me/919899624693" target="_blank" class="block px-4 py-2 text-charcoal hover:bg-cream">WhatsApp</a>
+      <div id="mobile-menu" class="md:hidden hidden bg-white py-3 px-4 space-y-2 border-t border-gray-100 shadow-lg">
+        <a href="index.html" class="block py-2 text-charcoal hover:text-gold font-medium">Home</a>
+        <a href="project.html" class="block py-2 text-charcoal hover:text-gold font-medium">Projects</a>
+        <a href="index.html#services" class="block py-2 text-charcoal hover:text-gold font-medium">Services</a>
+        <a href="nishawe.html" class="block py-2 text-gold font-semibold">Nishawe Furniture</a>
+        <a href="interior.html" class="block py-2 text-charcoal hover:text-gold font-medium">Interior Catalogue</a>
+        <a href="about.html" class="block py-2 text-charcoal hover:text-gold font-medium">About</a>
+        <a href="contact.html" class="block py-2 text-charcoal hover:text-gold font-medium">Contact</a>
+        <a href="tel:+919899624693" class="block py-2 text-gold font-semibold">+91 98996 24693</a>
+        <a href="contact.html?source=mobile-nav&cta=feasibility" class="block w-full text-center button button-primary mt-2">Book a feasibility consultation</a>
       </div>
     </div>
   </header>
 
-  <main class="pt-14">
-    <section class="relative h-[80vh] text-white">
-        <video 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="absolute inset-0 w-full h-full object-cover"
-          poster="background_images/pexels-kamo11235-667838.jpg"
-          id="hero-video"
-        >
-            <source src="https://videos.pexels.com/video-files/3854133/3854133-hd_1920_1080_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
-            <h1 class="text-5xl md:text-6xl font-bold">Nishawe Collection</h1>
-            <p class="mt-4 text-xl md:text-2xl">Bespoke Furniture, Crafted In-House.</p>
+  <main class="pt-24 pb-20">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="eyebrow">Arcdezine In-House Manufacturing</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-charcoal mb-4">Nishawe Custom Furniture</h1>
+        
+        <!-- Mandatory Brand Relationship Clarification (Section 9.1) -->
+        <blockquote class="bg-white p-6 rounded-2xl border border-gray-200 text-gray-700 text-base leading-relaxed my-6 shadow-sm">
+          <strong>Nishawe is Arcdezine’s custom furniture line.</strong> Arcdezine can specify and manage Nishawe pieces as part of a larger design-build project, or discuss selected furniture requirements separately.
+        </blockquote>
+
+        <!-- Two Distinct CTAs (Section 9.1) -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <a href="contact.html?source=nishawe&cta=turnkey" class="button button-primary">
+            Plan a complete space with Arcdezine
+          </a>
+          <a href="#products" class="button button-secondary">
+            Ask about a Nishawe furniture piece
+          </a>
         </div>
-    </section>
+      </div>
 
-    <section id="products" class="py-16 bg-cream">
-        <div class="container mx-auto px-4">
-            <div class="main-filters text-center mb-12">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="chair">Chairs</button>
-                <button class="filter-btn" data-filter="sofa">Sofas</button>
-                <button class="filter-btn" data-filter="bed">Beds</button>
-                <button class="filter-btn" data-filter="cabinet">Cabinets</button>
-            </div>
-
-            <div class="sub-filters text-center mb-12">
-                <div data-parent-filter="chair" class="hidden flex flex-wrap justify-center gap-4">
-                    <button class="filter-btn" data-filter="dining-chair">Dining Chairs</button>
-                    <button class="filter-btn" data-filter="arm-chair">Arm Chairs</button>
-                    <button class="filter-btn" data-filter="puffs">Puffs</button>
-                    <button class="filter-btn" data-filter="stool">Stools</button>
-                </div>
-                <div data-parent-filter="sofa" class="hidden flex flex-wrap justify-center gap-4">
-                    <button class="filter-btn" data-filter="sectional">Sectional</button>
-                    <button class="filter-btn" data-filter="recliner">Recliner</button>
-                    <button class="filter-btn" data-filter="loveseat">Loveseat</button>
-                    <button class="filter-btn" data-filter="chaise">Chaise</button>
-                </div>
-                <div data-parent-filter="bed" class="hidden flex flex-wrap justify-center gap-4">
-                    <button class="filter-btn" data-filter="platform-bed">Platform Beds</button>
-                    <button class="filter-btn" data-filter="storage-bed">Storage Beds</button>
-                    <button class="filter-btn" data-filter="day-bed">Day Beds</button>
-                </div>
-                <div data-parent-filter="cabinet" class="hidden flex flex-wrap justify-center gap-4">
-                    <button class="filter-btn" data-filter="tv">TV Cabinets</button>
-                    <button class="filter-btn" data-filter="side">Sideboards</button>
-                    <button class="filter-btn" data-filter="tall">Tall Cabinets</button>
-                    <button class="filter-btn" data-filter="other-cabinets">Other Cabinets</button>
-                    <button class="filter-btn" data-filter="puja">Puja Units</button>
-                </div>
-            </div>
-
-            <div class="products-grid js-products-grid">
-                <!-- Products will be dynamically inserted here -->
-            </div>
+      <!-- Workshop Value Props -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <i class="fas fa-tree text-gold text-2xl mb-3"></i>
+          <h3 class="font-bold text-charcoal mb-1">Seasoned Hardwood Frames</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Kiln-dried Marandi and Teak inner framing treated against termites with a 5-year structural warranty.</p>
         </div>
-    </section>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <i class="fas fa-layer-group text-gold text-2xl mb-3"></i>
+          <h3 class="font-bold text-charcoal mb-1">High-Resilience Multi-Density Foam</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">Sleepwell / Featherlite grade 32-40 density foam configurations with soft polyfill batting for long-lasting ergonomic comfort.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
+          <i class="fas fa-ruler-combined text-gold text-2xl mb-3"></i>
+          <h3 class="font-bold text-charcoal mb-1">Exact Room-Scale Proportions</h3>
+          <p class="text-xs text-gray-600 leading-relaxed">No off-the-shelf sizing dilemmas. Every sofa length, depth, and seat height is tailored to your room layout.</p>
+        </div>
+      </section>
+
+      <!-- Products Filter & Grid -->
+      <section id="products">
+        <div class="main-filters flex justify-center flex-wrap gap-3 mb-6">
+          <button class="filter-btn active" data-filter="all">All Nishawe Pieces</button>
+          <button class="filter-btn" data-filter="sofa">Sofas & Sectionals</button>
+          <button class="filter-btn" data-filter="chair">Accent & Dining Chairs</button>
+          <button class="filter-btn" data-filter="bed">Bespoke Beds</button>
+          <button class="filter-btn" data-filter="cabinet">Consoles & Cabinets</button>
+        </div>
+
+        <div class="sub-filters mb-12">
+          <div data-parent-filter="chair" class="hidden flex flex-wrap justify-center gap-2">
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="dining-chair">Dining Chairs</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="arm-chair">Arm Chairs</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="puffs">Puffs</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="stool">Stools</button>
+          </div>
+          <div data-parent-filter="sofa" class="hidden flex flex-wrap justify-center gap-2">
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="sectional">Sectional</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="recliner">Recliner</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="loveseat">Loveseat</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="chaise">Chaise</button>
+          </div>
+          <div data-parent-filter="bed" class="hidden flex flex-wrap justify-center gap-2">
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="platform-bed">Platform Beds</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="storage-bed">Storage Beds</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="day-bed">Day Beds</button>
+          </div>
+          <div data-parent-filter="cabinet" class="hidden flex flex-wrap justify-center gap-2">
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="tv">TV Units</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="side">Sideboards</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="tall">Tall Units</button>
+            <button class="filter-btn text-xs py-1.5 px-3" data-filter="puja">Mandir Units</button>
+          </div>
+        </div>
+
+        <div class="products-grid js-products-grid">
+          <!-- Dynamically populated via scripts/nishawe-new.js -->
+        </div>
+      </section>
+
+      <!-- Transparent Note -->
+      <div class="proof-note mt-14">
+        <strong>Workshop Customization:</strong> Fabric swatches (velvet, boucle, linen, genuine & leatherette), wood stains, and metal finishes can be inspected at our Gurugram facility or during an initial feasibility site visit.
+      </div>
+    </div>
   </main>
 
-  <footer class="bg-charcoal text-cream py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p class="mb-2">&copy; <span id="currentYear">2025</span> Arcdezine. All rights reserved.</p>
-      <p class="text-sm">
-        <a href="about.html" class="hover:text-gold">About</a> | 
-        <a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a> |
-        <a href="project.html" class="hover:text-gold">Projects</a> |
-        <a href="contact.html" class="hover:text-gold">Contact</a>
-      </p>
+  <!-- Sticky Mobile WhatsApp -->
+  <a href="https://wa.me/919899624693" class="whatsapp-sticky" aria-label="Chat on WhatsApp" data-source="nishawe_sticky">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Shared Footer -->
+  <footer class="bg-charcoal text-cream py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-left">
+        <div>
+          <h3 class="text-xl font-bold text-gold mb-3">Arcdezine</h3>
+          <p class="text-sm text-gray-400 leading-relaxed mb-4">
+            Turnkey architecture, interior execution, and custom Nishawe furniture across Delhi NCR with single-point accountability.
+          </p>
+          <p class="text-xs text-gray-500">Sector 48, Gurugram, Haryana</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Navigation</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-gold">Home</a></li>
+            <li><a href="project.html" class="hover:text-gold">Completed Projects</a></li>
+            <li><a href="index.html#services" class="hover:text-gold">Turnkey Services</a></li>
+            <li><a href="nishawe.html" class="hover:text-gold">Nishawe Furniture</a></li>
+            <li><a href="interior.html" class="hover:text-gold">Interior Catalogue</a></li>
+            <li><a href="about.html" class="hover:text-gold">About Team</a></li>
+            <li><a href="contact.html" class="hover:text-gold">Contact & Feasibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Service Areas</h4>
+          <ul class="text-sm space-y-2 text-gray-400">
+            <li>Gurugram (Golf Course Rd, Sohna Rd, DLF)</li>
+            <li>South & Central Delhi</li>
+            <li>Noida & Greater Noida</li>
+            <li>Faridabad & NCR Outskirts</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-3">Contact Desk</h4>
+          <p class="text-sm text-gray-400 mb-2">
+            <i class="fas fa-phone-alt text-gold mr-2"></i><a href="tel:+919899624693" class="hover:text-gold">+91 98996 24693</a>
+          </p>
+          <p class="text-sm text-gray-400 mb-3">
+            <i class="fas fa-envelope text-gold mr-2"></i>arcdezine27@gmail.com
+          </p>
+          <p class="text-sm text-gray-400">
+            <i class="fab fa-instagram text-gold mr-2"></i><a href="https://www.instagram.com/arcdezineofficial" target="_blank" rel="noopener" class="hover:text-gold">@arcdezineofficial</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+        <p>&copy; <span id="currentYear">2026</span> Arcdezine Turnkey Proof-to-Handover. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold underline">Privacy Policy</a></p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/site.js"></script>
   <script src="scripts/nishawe-new.js" type="module"></script>
-
 </body>
 </html>
