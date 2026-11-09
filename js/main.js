@@ -62,8 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+              requestIdleCallback(() => {
                 animateCounter(entry.target);
-                observer.unobserve(entry.target);
+              });
+              observer.unobserve(entry.target);
             }
         });
     }, {
@@ -81,4 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
+});
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
 });
